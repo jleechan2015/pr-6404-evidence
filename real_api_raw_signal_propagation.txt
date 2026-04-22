@@ -1,0 +1,145 @@
+{
+  "session_header": "[SESSION_HEADER]\nTimestamp: 1492 DR, Mirtul 15, 08:15:00\nLocation: Sealed Vault Chamber\nStatus: Lvl 4 Wizard | HP: 24/24 | XP: 6900/14000 | Gold: 10gp\nConditions: None | Exhaustion: 0 | Inspiration: No",
+  "resources": "HD: 4/4 | Spells: L1 4/4, L2 3/3 | Exhaustion: 0",
+  "narrative": "As your fingers brush the cold, vellum cover of the Tome of Archmage Valdris, a spark of azure energy leaps from the pedestal to your fingertips. The vault, silent for centuries, seems to exhale a long-held breath. You lift the heavy volume; it is surprisingly light, its weight seemingly diminished by the potent magic woven into its binding. \n\nYou pause, the tome cradled in your arms, and reflect on the journey that brought you to this lightless place. The echoes of your own footsteps in the ruins sound like the cadence of a new chapter beginning. The knowledge within this book is not merely lost history—it is the missing piece of your own burgeoning power. The air in the chamber hums with a resonance that matches the beating of your heart, signaling that your transition from a mere student of the arts to a true wielder of the weave is finally at hand.",
+  "planning_block": {
+    "thinking": "Aldric has successfully retrieved the primary objective. The quest 'The Ancient Tome' is complete, providing enough experience to reach Level 5—a significant power spike for a Wizard (access to 3rd-level spells). The immediate area is secure due to the sanctuary of the vault, making this an ideal time for a character breakthrough.",
+    "context": "Quest completion and level-up opportunity in the vault chamber.",
+    "choices": [
+      {
+        "id": "level_up_now",
+        "text": "Level Up to Level 5",
+        "description": "Meditate on the Tome's secrets to unlock your 3rd-level spell slots and higher proficiency.",
+        "risk_level": "safe",
+        "freeze_time": true
+      },
+      {
+        "id": "investigate_tome_further",
+        "text": "Investigate the Tome's Secrets",
+        "description": "Carefully examine the first few pages before leaving the vault.",
+        "risk_level": "low"
+      },
+      {
+        "id": "exit_vault",
+        "text": "Exit the Vault",
+        "description": "Secure the tome in your pack and begin the journey back to the surface.",
+        "risk_level": "medium"
+      }
+    ]
+  },
+  "rewards_box": {
+    "source": "quest",
+    "xp_gained": 500,
+    "current_xp": 6900,
+    "next_level_xp": 6500,
+    "progress_percent": 100,
+    "level_up_available": true,
+    "loot": [
+      "Tome of Archmage Valdris"
+    ],
+    "gold": 0
+  },
+  "level_up_signal": {
+    "level_up": true,
+    "new_level": 5,
+    "xp_earned": 500,
+    "xp_total": 6900,
+    "xp_to_next_level": 14000,
+    "source": "quest",
+    "choices": [
+      {
+        "id": "choice_spells",
+        "text": "Choose two 3rd-level spells"
+      },
+      {
+        "id": "choice_hp",
+        "text": "Roll or take average for HP"
+      }
+    ],
+    "rewards": {
+      "gold": 0,
+      "loot": []
+    }
+  },
+  "action_resolution": {
+    "player_input": "I lift the Tome of Archmage Valdris from the ancient pedestal, complete the quest, and reflect on the significance of what I have achieved.",
+    "interpreted_as": "arcana_resonance_check",
+    "reinterpreted": false,
+    "mechanics": {
+      "type": "skill_check",
+      "rolls": [
+        {
+          "notation": "1d20+6",
+          "result": 14,
+          "total": 20,
+          "dc": 15,
+          "success": true,
+          "purpose": "Arcana (INT)",
+          "dc_reasoning": "Resonating with a high-level magical artifact's essence.",
+          "outcome": "Success - You feel a deep connection to the tome's power."
+        }
+      ],
+      "audit_events": [
+        "Intelligence (Arcana) check: 14 + 4 (INT) + 2 (PROF) = 20 vs DC 15"
+      ]
+    },
+    "audit_flags": [],
+    "narrative_outcome": "Aldric successfully claims the tome and harmonizes with its ancient magical signature."
+  },
+  "state_updates": {
+    "player_character_data": {
+      "experience": {
+        "current": 6900,
+        "needed_for_next_level": 14000
+      },
+      "equipment": {
+        "backpack": {
+          "append": [
+            {
+              "name": "Tome of Archmage Valdris",
+              "type": "quest_item",
+              "description": "A powerful and ancient wizard's tome containing lost arcane secrets.",
+              "equipped": false
+            }
+          ]
+        }
+      }
+    },
+    "quests": {
+      "active_quests": [
+        {
+          "id": "quest_ancient_tome",
+          "status": "completed"
+        }
+      ]
+    },
+    "world_data": {
+      "world_time": {
+        "year": 1492,
+        "month": "Mirtul",
+        "day": 15,
+        "hour": 8,
+        "minute": 15,
+        "second": 0,
+        "microsecond": 0,
+        "time_of_day": "morning"
+      }
+    },
+    "custom_campaign_state": {
+      "arc_milestones": {
+        "primary_arc": {
+          "status": "completed",
+          "phase": "tome_recovered",
+          "progress": 100,
+          "updated_at": "2026-04-13T08:15:00Z"
+        }
+      }
+    }
+  },
+  "entities_mentioned": [
+    "Tome of Archmage Valdris",
+    "Archmage Valdris"
+  ],
+  "location_confirmed": "Sealed Vault Chamber",
+  "god_mode_response": ""
+}

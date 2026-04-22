@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "test_name": "ui_level_up_rewards_planning_atomicity_browser",
+  "scenarios": [
+    {
+      "name": "pending_level_up_projection",
+      "passed": true,
+      "campaign_id": "C7hD8r2mAkPCOXz0zx1L",
+      "latest_choice_ids": [
+        "level_up_now",
+        "continue_adventuring",
+        "finish_level_up_return_to_game",
+        "__custom_action__"
+      ],
+      "latest_rewards_text": "\u2728 REWARDS (milestone):\n+50 XP | XP: 350/900 (39%)\n\ud83c\udf89 LEVEL UP AVAILABLE!"
+    }
+  ],
+  "errors": [],
+  "campaign_id": "C7hD8r2mAkPCOXz0zx1L",
+  "user_id": "layer4-evidence-20260422T225759Z",
+  "video_artifacts": {
+    "videos": [
+      "/tmp/worldarchitect.ai/level-up-integrated/iteration_007/ui_level_up_rewards_planning_atomicity_browser/iteration_001/artifacts/videos/b7612865f460ca5d6b1216eca8c34301.webm"
+    ],
+    "subtitles": [
+      "/tmp/worldarchitect.ai/level-up-integrated/iteration_007/ui_level_up_rewards_planning_atomicity_browser/iteration_001/artifacts/videos/b7612865f460ca5d6b1216eca8c34301.vtt",
+      "/tmp/worldarchitect.ai/level-up-integrated/iteration_007/ui_level_up_rewards_planning_atomicity_browser/iteration_001/artifacts/videos/ui_level_up_rewards_planning_atomicity_browser_layer4-evidence-20260422t225759z_42771.vtt"
+    ]
+  }
+}

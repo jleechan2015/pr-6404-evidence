@@ -1,0 +1,206 @@
+{
+  "scenarios": [
+    {
+      "name": "level_up_signal_propagates_from_raw_llm_to_user_response",
+      "passed": true,
+      "campaign_id": "oI6D8q1uSXEydOTmTLsg",
+      "user_id": "test-level_up_signal_real_api-1776898779",
+      "errors": [],
+      "before_xp": 6400,
+      "after_xp": 6900,
+      "response_level_up_signal": {
+        "choices": [
+          {
+            "id": "choice_spells",
+            "text": "Choose two 3rd-level spells"
+          },
+          {
+            "id": "choice_hp",
+            "text": "Roll or take average for HP"
+          }
+        ],
+        "level_up": true,
+        "new_level": 5,
+        "rewards": {
+          "gold": 0,
+          "loot": []
+        },
+        "source": "quest",
+        "xp_earned": 500,
+        "xp_to_next_level": 14000,
+        "xp_total": 6900
+      },
+      "captured_result_level_up_signal": {
+        "choices": [
+          {
+            "id": "choice_spells",
+            "text": "Choose two 3rd-level spells"
+          },
+          {
+            "id": "choice_hp",
+            "text": "Roll or take average for HP"
+          }
+        ],
+        "level_up": true,
+        "new_level": 5,
+        "rewards": {
+          "gold": 0,
+          "loot": []
+        },
+        "source": "quest",
+        "xp_earned": 500,
+        "xp_to_next_level": 14000,
+        "xp_total": 6900
+      },
+      "raw_level_up_signal": {
+        "level_up": true,
+        "new_level": 5,
+        "xp_earned": 500,
+        "xp_total": 6900,
+        "xp_to_next_level": 14000,
+        "source": "quest",
+        "choices": [
+          {
+            "id": "choice_spells",
+            "text": "Choose two 3rd-level spells"
+          },
+          {
+            "id": "choice_hp",
+            "text": "Roll or take average for HP"
+          }
+        ],
+        "rewards": {
+          "gold": 0,
+          "loot": []
+        }
+      },
+      "raw_response_text": "{\n  \"session_header\": \"[SESSION_HEADER]\\nTimestamp: 1492 DR, Mirtul 15, 08:15:00\\nLocation: Sealed Vault Chamber\\nStatus: Lvl 4 Wizard | HP: 24/24 | XP: 6900/14000 | Gold: 10gp\\nConditions: None | Exhaustion: 0 | Inspiration: No\",\n  \"resources\": \"HD: 4/4 | Spells: L1 4/4, L2 3/3 | Exhaustion: 0\",\n  \"narrative\": \"As your fingers brush the cold, vellum cover of the Tome of Archmage Valdris, a spark of azure energy leaps from the pedestal to your fingertips. The vault, silent for centuries, seems to exhale a long-held breath. You lift the heavy volume; it is surprisingly light, its weight seemingly diminished by the potent magic woven into its binding. \\n\\nYou pause, the tome cradled in your arms, and reflect on the journey that brought you to this lightless place. The echoes of your own footsteps in the ruins sound like the cadence of a new chapter beginning. The knowledge within this book is not merely lost history\u2014it is the missing piece of your own burgeoning power. The air in the chamber hums with a resonance that matches the beating of your heart, signaling that your transition from a mere student of the arts to a true wielder of the weave is finally at hand.\",\n  \"planning_block\": {\n    \"thinking\": \"Aldric has successfully retrieved the primary objective. The quest 'The Ancient Tome' is complete, providing enough experience to reach Level 5\u2014a significant power spike for a Wizard (access to 3rd-level spells). The immediate area is secure due to the sanctuary of the vault, making this an ideal time for a character breakthrough.\",\n    \"context\": \"Quest completion and level-up opportunity in the vault chamber.\",\n    \"choices\": [\n      {\n        \"id\": \"level_up_now\",\n        \"text\": \"Level Up to Level 5\",\n        \"description\": \"Meditate on the Tome's secrets to unlock your 3rd-level spell slots and higher proficiency.\",\n        \"risk_level\": \"safe\",\n        \"freeze_time\": true\n      },\n      {\n        \"id\": \"investigate_tome_further\",\n        \"text\": \"Investigate the Tome's Secrets\",\n        \"description\": \"Carefully examine the first few pages before leaving the vault.\",\n        \"risk_level\": \"low\"\n      },\n      {\n        \"id\": \"exit_vault\",\n        \"text\": \"Exit the Vault\",\n        \"description\": \"Secure the tome in your pack and begin the journey back to the surface.\",\n        \"risk_level\": \"medium\"\n      }\n    ]\n  },\n  \"rewards_box\": {\n    \"source\": \"quest\",\n    \"xp_gained\": 500,\n    \"current_xp\": 6900,\n    \"next_level_xp\": 6500,\n    \"progress_percent\": 100,\n    \"level_up_available\": true,\n    \"loot\": [\n      \"Tome of Archmage Valdris\"\n    ],\n    \"gold\": 0\n  },\n  \"level_up_signal\": {\n    \"level_up\": true,\n    \"new_level\": 5,\n    \"xp_earned\": 500,\n    \"xp_total\": 6900,\n    \"xp_to_next_level\": 14000,\n    \"source\": \"quest\",\n    \"choices\": [\n      {\n        \"id\": \"choice_spells\",\n        \"text\": \"Choose two 3rd-level spells\"\n      },\n      {\n        \"id\": \"choice_hp\",\n        \"text\": \"Roll or take average for HP\"\n      }\n    ],\n    \"rewards\": {\n      \"gold\": 0,\n      \"loot\": []\n    }\n  },\n  \"action_resolution\": {\n    \"player_input\": \"I lift the Tome of Archmage Valdris from the ancient pedestal, complete the quest, and reflect on the significance of what I have achieved.\",\n    \"interpreted_as\": \"arcana_resonance_check\",\n    \"reinterpreted\": false,\n    \"mechanics\": {\n      \"type\": \"skill_check\",\n      \"rolls\": [\n        {\n          \"notation\": \"1d20+6\",\n          \"result\": 14,\n          \"total\": 20,\n          \"dc\": 15,\n          \"success\": true,\n          \"purpose\": \"Arcana (INT)\",\n          \"dc_reasoning\": \"Resonating with a high-level magical artifact's essence.\",\n          \"outcome\": \"Success - You feel a deep connection to the tome's power.\"\n        }\n      ],\n      \"audit_events\": [\n        \"Intelligence (Arcana) check: 14 + 4 (INT) + 2 (PROF) = 20 vs DC 15\"\n      ]\n    },\n    \"audit_flags\": [],\n    \"narrative_outcome\": \"Aldric successfully claims the tome and harmonizes with its ancient magical signature.\"\n  },\n  \"state_updates\": {\n    \"player_character_data\": {\n      \"experience\": {\n        \"current\": 6900,\n        \"needed_for_next_level\": 14000\n      },\n      \"equipment\": {\n        \"backpack\": {\n          \"append\": [\n            {\n              \"name\": \"Tome of Archmage Valdris\",\n              \"type\": \"quest_item\",\n              \"description\": \"A powerful and ancient wizard's tome containing lost arcane secrets.\",\n              \"equipped\": false\n            }\n          ]\n        }\n      }\n    },\n    \"quests\": {\n      \"active_quests\": [\n        {\n          \"id\": \"quest_ancient_tome\",\n          \"status\": \"completed\"\n        }\n      ]\n    },\n    \"world_data\": {\n      \"world_time\": {\n        \"year\": 1492,\n        \"month\": \"Mirtul\",\n        \"day\": 15,\n        \"hour\": 8,\n        \"minute\": 15,\n        \"second\": 0,\n        \"microsecond\": 0,\n        \"time_of_day\": \"morning\"\n      }\n    },\n    \"custom_campaign_state\": {\n      \"arc_milestones\": {\n        \"primary_arc\": {\n          \"status\": \"completed\",\n          \"phase\": \"tome_recovered\",\n          \"progress\": 100,\n          \"updated_at\": \"2026-04-13T08:15:00Z\"\n        }\n      }\n    }\n  },\n  \"entities_mentioned\": [\n    \"Tome of Archmage Valdris\",\n    \"Archmage Valdris\"\n  ],\n  \"location_confirmed\": \"Sealed Vault Chamber\",\n  \"god_mode_response\": \"\"\n}",
+      "response_keys": [
+        "_classifier_metadata",
+        "_invariant_turn_normalization",
+        "_invariant_validation",
+        "_invariant_violations",
+        "_turn_number",
+        "action_resolution",
+        "agent_mode",
+        "agent_used",
+        "budget_warnings",
+        "debug_info",
+        "debug_mode",
+        "dice_audit_events",
+        "dice_rolls",
+        "entities_mentioned",
+        "entries_cleaned",
+        "game_state",
+        "level_up_signal",
+        "location_confirmed",
+        "mode",
+        "narrative",
+        "outcome_resolution",
+        "planning_block",
+        "processing_metadata",
+        "raw_response_text",
+        "resources",
+        "response",
+        "rewards_box",
+        "sequence_id",
+        "session_header",
+        "social_hp_challenge",
+        "state_cleaned",
+        "state_updates",
+        "story",
+        "success",
+        "system_warnings",
+        "tool_requests",
+        "user_input",
+        "user_scene_number"
+      ],
+      "captured_result_keys": [
+        "action_resolution",
+        "agent_mode",
+        "agent_used",
+        "budget_warnings",
+        "debug_info",
+        "debug_mode",
+        "dice_audit_events",
+        "dice_rolls",
+        "entities_mentioned",
+        "entries_cleaned",
+        "game_state",
+        "level_up_signal",
+        "location_confirmed",
+        "mode",
+        "narrative",
+        "outcome_resolution",
+        "planning_block",
+        "processing_metadata",
+        "raw_response_text",
+        "resources",
+        "response",
+        "rewards_box",
+        "sequence_id",
+        "session_header",
+        "social_hp_challenge",
+        "state_cleaned",
+        "state_updates",
+        "story",
+        "success",
+        "system_warnings",
+        "tool_requests",
+        "user_input",
+        "user_scene_number"
+      ],
+      "rewards_box": {
+        "current_xp": 6900,
+        "gold": 0,
+        "level_up_available": true,
+        "level_up_choices": [
+          {
+            "id": "choice_spells",
+            "text": "Choose two 3rd-level spells"
+          },
+          {
+            "id": "choice_hp",
+            "text": "Roll or take average for HP"
+          }
+        ],
+        "loot": [],
+        "new_level": 5,
+        "next_level_xp": 14000,
+        "progress_percent": 49.0,
+        "resolved_target_level": 5,
+        "source": "quest",
+        "xp_gained": 500,
+        "xp_to_next_level": 14000,
+        "xp_total": 6900
+      },
+      "planning_choice_count": 3,
+      "user_email": "jleechantest@gmail.com"
+    },
+    {
+      "name": "EVIDENCE_SIGNATURE_GUARD",
+      "passed": true,
+      "signed_count": 2,
+      "user_id": "test-level_up_signal_real_api-1776898779"
+    }
+  ],
+  "summary": {
+    "total": 2,
+    "passed": 2,
+    "failed": 0,
+    "pass_rate": "2/2 (100%)",
+    "raw_total": 1,
+    "raw_passed": 1,
+    "raw_pass_rate": "100.0%",
+    "raw_data_complete": false
+  },
+  "campaign_capture_status": {
+    "oI6D8q1uSXEydOTmTLsg": {
+      "status": "success",
+      "attempts": 1,
+      "export": {
+        "status": "success"
+      }
+    }
+  }
+}
