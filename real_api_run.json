@@ -3,27 +3,41 @@
     {
       "name": "level_up_signal_propagates_from_raw_llm_to_user_response",
       "passed": true,
-      "campaign_id": "oI6D8q1uSXEydOTmTLsg",
-      "user_id": "test-level_up_signal_real_api-1776898779",
+      "campaign_id": "EdXwkjfWTGRi9QmjTk2k",
+      "user_id": "test-level_up_signal_real_api-1776900062",
       "errors": [],
       "before_xp": 6400,
       "after_xp": 6900,
       "response_level_up_signal": {
         "choices": [
           {
-            "id": "choice_spells",
-            "text": "Choose two 3rd-level spells"
+            "description": "Your proficiency bonus increases from +2 to +3.",
+            "name": "Proficiency Bonus Increase",
+            "type": "class_feature"
           },
           {
-            "id": "choice_hp",
-            "text": "Roll or take average for HP"
+            "description": "You gain two 3rd-level spell slots.",
+            "name": "3rd-Level Spell Slots",
+            "type": "spellcasting"
+          },
+          {
+            "description": "You can add two 3rd-level spells to your spellbook (e.g., Fireball, Counterspell).",
+            "name": "New Spells",
+            "type": "spellcasting"
+          },
+          {
+            "description": "You learn one additional cantrip of your choice.",
+            "name": "New Cantrip",
+            "type": "class_feature"
           }
         ],
         "level_up": true,
         "new_level": 5,
         "rewards": {
           "gold": 0,
-          "loot": []
+          "loot": [
+            "Tome of Archmage Valdris"
+          ]
         },
         "source": "quest",
         "xp_earned": 500,
@@ -33,19 +47,33 @@
       "captured_result_level_up_signal": {
         "choices": [
           {
-            "id": "choice_spells",
-            "text": "Choose two 3rd-level spells"
+            "description": "Your proficiency bonus increases from +2 to +3.",
+            "name": "Proficiency Bonus Increase",
+            "type": "class_feature"
           },
           {
-            "id": "choice_hp",
-            "text": "Roll or take average for HP"
+            "description": "You gain two 3rd-level spell slots.",
+            "name": "3rd-Level Spell Slots",
+            "type": "spellcasting"
+          },
+          {
+            "description": "You can add two 3rd-level spells to your spellbook (e.g., Fireball, Counterspell).",
+            "name": "New Spells",
+            "type": "spellcasting"
+          },
+          {
+            "description": "You learn one additional cantrip of your choice.",
+            "name": "New Cantrip",
+            "type": "class_feature"
           }
         ],
         "level_up": true,
         "new_level": 5,
         "rewards": {
           "gold": 0,
-          "loot": []
+          "loot": [
+            "Tome of Archmage Valdris"
+          ]
         },
         "source": "quest",
         "xp_earned": 500,
@@ -61,20 +89,34 @@
         "source": "quest",
         "choices": [
           {
-            "id": "choice_spells",
-            "text": "Choose two 3rd-level spells"
+            "type": "class_feature",
+            "name": "Proficiency Bonus Increase",
+            "description": "Your proficiency bonus increases from +2 to +3."
           },
           {
-            "id": "choice_hp",
-            "text": "Roll or take average for HP"
+            "type": "spellcasting",
+            "name": "3rd-Level Spell Slots",
+            "description": "You gain two 3rd-level spell slots."
+          },
+          {
+            "type": "spellcasting",
+            "name": "New Spells",
+            "description": "You can add two 3rd-level spells to your spellbook (e.g., Fireball, Counterspell)."
+          },
+          {
+            "type": "class_feature",
+            "name": "New Cantrip",
+            "description": "You learn one additional cantrip of your choice."
           }
         ],
         "rewards": {
           "gold": 0,
-          "loot": []
+          "loot": [
+            "Tome of Archmage Valdris"
+          ]
         }
       },
-      "raw_response_text": "{\n  \"session_header\": \"[SESSION_HEADER]\\nTimestamp: 1492 DR, Mirtul 15, 08:15:00\\nLocation: Sealed Vault Chamber\\nStatus: Lvl 4 Wizard | HP: 24/24 | XP: 6900/14000 | Gold: 10gp\\nConditions: None | Exhaustion: 0 | Inspiration: No\",\n  \"resources\": \"HD: 4/4 | Spells: L1 4/4, L2 3/3 | Exhaustion: 0\",\n  \"narrative\": \"As your fingers brush the cold, vellum cover of the Tome of Archmage Valdris, a spark of azure energy leaps from the pedestal to your fingertips. The vault, silent for centuries, seems to exhale a long-held breath. You lift the heavy volume; it is surprisingly light, its weight seemingly diminished by the potent magic woven into its binding. \\n\\nYou pause, the tome cradled in your arms, and reflect on the journey that brought you to this lightless place. The echoes of your own footsteps in the ruins sound like the cadence of a new chapter beginning. The knowledge within this book is not merely lost history\u2014it is the missing piece of your own burgeoning power. The air in the chamber hums with a resonance that matches the beating of your heart, signaling that your transition from a mere student of the arts to a true wielder of the weave is finally at hand.\",\n  \"planning_block\": {\n    \"thinking\": \"Aldric has successfully retrieved the primary objective. The quest 'The Ancient Tome' is complete, providing enough experience to reach Level 5\u2014a significant power spike for a Wizard (access to 3rd-level spells). The immediate area is secure due to the sanctuary of the vault, making this an ideal time for a character breakthrough.\",\n    \"context\": \"Quest completion and level-up opportunity in the vault chamber.\",\n    \"choices\": [\n      {\n        \"id\": \"level_up_now\",\n        \"text\": \"Level Up to Level 5\",\n        \"description\": \"Meditate on the Tome's secrets to unlock your 3rd-level spell slots and higher proficiency.\",\n        \"risk_level\": \"safe\",\n        \"freeze_time\": true\n      },\n      {\n        \"id\": \"investigate_tome_further\",\n        \"text\": \"Investigate the Tome's Secrets\",\n        \"description\": \"Carefully examine the first few pages before leaving the vault.\",\n        \"risk_level\": \"low\"\n      },\n      {\n        \"id\": \"exit_vault\",\n        \"text\": \"Exit the Vault\",\n        \"description\": \"Secure the tome in your pack and begin the journey back to the surface.\",\n        \"risk_level\": \"medium\"\n      }\n    ]\n  },\n  \"rewards_box\": {\n    \"source\": \"quest\",\n    \"xp_gained\": 500,\n    \"current_xp\": 6900,\n    \"next_level_xp\": 6500,\n    \"progress_percent\": 100,\n    \"level_up_available\": true,\n    \"loot\": [\n      \"Tome of Archmage Valdris\"\n    ],\n    \"gold\": 0\n  },\n  \"level_up_signal\": {\n    \"level_up\": true,\n    \"new_level\": 5,\n    \"xp_earned\": 500,\n    \"xp_total\": 6900,\n    \"xp_to_next_level\": 14000,\n    \"source\": \"quest\",\n    \"choices\": [\n      {\n        \"id\": \"choice_spells\",\n        \"text\": \"Choose two 3rd-level spells\"\n      },\n      {\n        \"id\": \"choice_hp\",\n        \"text\": \"Roll or take average for HP\"\n      }\n    ],\n    \"rewards\": {\n      \"gold\": 0,\n      \"loot\": []\n    }\n  },\n  \"action_resolution\": {\n    \"player_input\": \"I lift the Tome of Archmage Valdris from the ancient pedestal, complete the quest, and reflect on the significance of what I have achieved.\",\n    \"interpreted_as\": \"arcana_resonance_check\",\n    \"reinterpreted\": false,\n    \"mechanics\": {\n      \"type\": \"skill_check\",\n      \"rolls\": [\n        {\n          \"notation\": \"1d20+6\",\n          \"result\": 14,\n          \"total\": 20,\n          \"dc\": 15,\n          \"success\": true,\n          \"purpose\": \"Arcana (INT)\",\n          \"dc_reasoning\": \"Resonating with a high-level magical artifact's essence.\",\n          \"outcome\": \"Success - You feel a deep connection to the tome's power.\"\n        }\n      ],\n      \"audit_events\": [\n        \"Intelligence (Arcana) check: 14 + 4 (INT) + 2 (PROF) = 20 vs DC 15\"\n      ]\n    },\n    \"audit_flags\": [],\n    \"narrative_outcome\": \"Aldric successfully claims the tome and harmonizes with its ancient magical signature.\"\n  },\n  \"state_updates\": {\n    \"player_character_data\": {\n      \"experience\": {\n        \"current\": 6900,\n        \"needed_for_next_level\": 14000\n      },\n      \"equipment\": {\n        \"backpack\": {\n          \"append\": [\n            {\n              \"name\": \"Tome of Archmage Valdris\",\n              \"type\": \"quest_item\",\n              \"description\": \"A powerful and ancient wizard's tome containing lost arcane secrets.\",\n              \"equipped\": false\n            }\n          ]\n        }\n      }\n    },\n    \"quests\": {\n      \"active_quests\": [\n        {\n          \"id\": \"quest_ancient_tome\",\n          \"status\": \"completed\"\n        }\n      ]\n    },\n    \"world_data\": {\n      \"world_time\": {\n        \"year\": 1492,\n        \"month\": \"Mirtul\",\n        \"day\": 15,\n        \"hour\": 8,\n        \"minute\": 15,\n        \"second\": 0,\n        \"microsecond\": 0,\n        \"time_of_day\": \"morning\"\n      }\n    },\n    \"custom_campaign_state\": {\n      \"arc_milestones\": {\n        \"primary_arc\": {\n          \"status\": \"completed\",\n          \"phase\": \"tome_recovered\",\n          \"progress\": 100,\n          \"updated_at\": \"2026-04-13T08:15:00Z\"\n        }\n      }\n    }\n  },\n  \"entities_mentioned\": [\n    \"Tome of Archmage Valdris\",\n    \"Archmage Valdris\"\n  ],\n  \"location_confirmed\": \"Sealed Vault Chamber\",\n  \"god_mode_response\": \"\"\n}",
+      "raw_response_text": "{\n  \"session_header\": \"[SESSION_HEADER]\\nTimestamp: 1492 DR, Mirtul 15, 08:00:15\\nLocation: Ancient Ruins Vault\\nStatus: Lvl 4 Wizard | HP: 24/24 | XP: 6900/14000 | Gold: 15gp\\nConditions: None | Exhaustion: 0 | Inspiration: No\",\n  \"narrative\": \"Your fingers tremble slightly as they brush against the cold, vellum-wrapped leather of the Tome of Archmage Valdris. As you lift it from the stone pedestal, the blue ley-line energy that once wreathed the altar dissipates with a soft, resonant hum, leaving the vault in a peaceful silence. The weight of the book is substantial, its cover etched with silver runes that pulse faintly in response to your own arcane presence. You have done it; the knowledge that was lost for centuries is now within your grasp.\\n\\nA profound sense of clarity washes over you. The struggles of the ruins\u2014the traps bypassed, the shadows outmaneuvered\u2014crystallize into a deeper understanding of the Weave. You feel the boundary of your current power straining, ready to break through into the higher circles of magic. The transition is inevitable; you have reached Level 5.\",\n  \"planning_block\": {\n    \"thinking\": \"Aldric has successfully recovered the tome, completing the quest 'The Ancient Tome'. This significant milestone provides 500 XP, pushing his total to 6,900 XP\u2014well past the 6,500 threshold for Level 5. As he holds the artifact, his mind expands, unlocking the potential for 3rd-level spells and increased proficiency.\",\n    \"choices\": [\n      {\n        \"id\": \"begin_level_up\",\n        \"text\": \"Begin Level 5 Advancement\",\n        \"description\": \"Enter a state of deep meditation to finalize your transition to Level 5 and select your new 3rd-level spells.\",\n        \"risk_level\": \"safe\",\n        \"freeze_time\": true\n      },\n      {\n        \"id\": \"examine_tome_details\",\n        \"text\": \"Examine Tome Details\",\n        \"description\": \"Read through the first few pages of Valdris's work before focusing on your own growth.\",\n        \"risk_level\": \"safe\"\n      }\n    ]\n  },\n  \"level_up_signal\": {\n    \"level_up\": true,\n    \"new_level\": 5,\n    \"xp_earned\": 500,\n    \"xp_total\": 6900,\n    \"xp_to_next_level\": 14000,\n    \"source\": \"quest\",\n    \"choices\": [\n      {\n        \"type\": \"class_feature\",\n        \"name\": \"Proficiency Bonus Increase\",\n        \"description\": \"Your proficiency bonus increases from +2 to +3.\"\n      },\n      {\n        \"type\": \"spellcasting\",\n        \"name\": \"3rd-Level Spell Slots\",\n        \"description\": \"You gain two 3rd-level spell slots.\"\n      },\n      {\n        \"type\": \"spellcasting\",\n        \"name\": \"New Spells\",\n        \"description\": \"You can add two 3rd-level spells to your spellbook (e.g., Fireball, Counterspell).\"\n      },\n      {\n        \"type\": \"class_feature\",\n        \"name\": \"New Cantrip\",\n        \"description\": \"You learn one additional cantrip of your choice.\"\n      }\n    ],\n    \"rewards\": {\n      \"gold\": 0,\n      \"loot\": [\n        \"Tome of Archmage Valdris\"\n      ]\n    }\n  },\n  \"rewards_box\": {\n    \"source\": \"quest\",\n    \"xp_gained\": 500,\n    \"current_xp\": 6900,\n    \"next_level_xp\": 14000,\n    \"progress_percent\": 100,\n    \"level_up_available\": true,\n    \"loot\": [\n      \"Tome of Archmage Valdris\"\n    ],\n    \"gold\": 0\n  },\n  \"action_resolution\": {\n    \"player_input\": \"I lift the Tome of Archmage Valdris from the ancient pedestal, complete the quest, and reflect on the significance of what I have achieved.\",\n    \"interpreted_as\": \"recovering the quest objective\",\n    \"reinterpreted\": false,\n    \"audit_flags\": [],\n    \"mechanics\": {\n      \"rolls\": [],\n      \"audit_events\": [\n        \"Quest 'The Ancient Tome' completed: +500 XP awarded.\"\n      ]\n    },\n    \"narrative_outcome\": \"Aldric successfully recovers the tome, achieving Level 5 in the process.\"\n  },\n  \"state_updates\": {\n    \"player_character_data\": {\n      \"experience\": {\n        \"current\": 6900,\n        \"to_next_level\": 14000\n      },\n      \"equipment\": {\n        \"backpack\": {\n          \"append\": [\n            {\n              \"name\": \"Tome of Archmage Valdris\",\n              \"type\": \"item\",\n              \"description\": \"A rune-etched leather tome containing powerful lost magic.\"\n            }\n          ]\n        }\n      }\n    },\n    \"world_data\": {\n      \"world_time\": {\n        \"year\": 1492,\n        \"month\": \"Mirtul\",\n        \"day\": 15,\n        \"hour\": 8,\n        \"minute\": 0,\n        \"second\": 15,\n        \"microsecond\": 0,\n        \"time_of_day\": \"Morning\"\n      }\n    },\n    \"custom_campaign_state\": {\n      \"level_up_in_progress\": true,\n      \"level_up_pending\": true,\n      \"completed_missions\": {\n        \"append\": \"quest_ancient_tome\"\n      },\n      \"sanctuary_mode\": {\n        \"active\": true,\n        \"activated_turn\": 1,\n        \"expires_turn\": 9,\n        \"arc\": \"The Ancient Tome\",\n        \"scale\": \"medium\"\n      }\n    }\n  },\n  \"entities_mentioned\": [\n    \"Tome of Archmage Valdris\"\n  ],\n  \"location_confirmed\": \"Ancient Ruins Vault\",\n  \"resources\": \"HD: 4/4 | Spells: L1 2/2 | Exhaustion: 0\",\n  \"player_notification\": \"A sense of calm settles over the ruins as the quest is completed. You have achieved Level 5!\",\n  \"god_mode_response\": \"\"\n}",
       "response_keys": [
         "_classifier_metadata",
         "_invariant_turn_normalization",
@@ -156,15 +198,29 @@
         "level_up_available": true,
         "level_up_choices": [
           {
-            "id": "choice_spells",
-            "text": "Choose two 3rd-level spells"
+            "description": "Your proficiency bonus increases from +2 to +3.",
+            "name": "Proficiency Bonus Increase",
+            "type": "class_feature"
           },
           {
-            "id": "choice_hp",
-            "text": "Roll or take average for HP"
+            "description": "You gain two 3rd-level spell slots.",
+            "name": "3rd-Level Spell Slots",
+            "type": "spellcasting"
+          },
+          {
+            "description": "You can add two 3rd-level spells to your spellbook (e.g., Fireball, Counterspell).",
+            "name": "New Spells",
+            "type": "spellcasting"
+          },
+          {
+            "description": "You learn one additional cantrip of your choice.",
+            "name": "New Cantrip",
+            "type": "class_feature"
           }
         ],
-        "loot": [],
+        "loot": [
+          "Tome of Archmage Valdris"
+        ],
         "new_level": 5,
         "next_level_xp": 14000,
         "progress_percent": 49.0,
@@ -181,7 +237,7 @@
       "name": "EVIDENCE_SIGNATURE_GUARD",
       "passed": true,
       "signed_count": 2,
-      "user_id": "test-level_up_signal_real_api-1776898779"
+      "user_id": "test-level_up_signal_real_api-1776900062"
     }
   ],
   "summary": {
@@ -195,7 +251,7 @@
     "raw_data_complete": false
   },
   "campaign_capture_status": {
-    "oI6D8q1uSXEydOTmTLsg": {
+    "EdXwkjfWTGRi9QmjTk2k": {
       "status": "success",
       "attempts": 1,
       "export": {

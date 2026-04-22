@@ -3,17 +3,19 @@
 PR: https://github.com/jleechanorg/worldarchitect.ai/pull/6404
 WorldArchitect head under review: `4bb5cbe2d026900dc1019dac7fc62ac6be921664`
 
-This public package exists because the main repository is private. It republishes the media and key textual artifacts needed to review these two claims:
+This public package republishes the review artifacts for a private repository. The substantive evidence in this package was recaptured from a clean detached worktree at the current head, with `working_tree_dirty: false` in both refreshed bundles.
+
+## Claims
 
 1. `level_up_signal` reaches the actual MCP and user response path.
 2. A pending level-up state materialized into a persisted story entry renders atomically in the real browser as paired rewards and planning UI on the latest entry.
 
-## Clean-computer reproduction outline
+## Clean-computer repro
 
 Prerequisites:
-- Access to `https://github.com/jleechanorg/worldarchitect.ai`
+- access to `https://github.com/jleechanorg/worldarchitect.ai`
 - Python 3.11+
-- Real Firebase credentials and real LLM credentials configured per the repo README
+- real Firebase credentials and real LLM credentials configured per the repo README
 - `WORLDAI_DEV_MODE=true`
 - `TESTING_AUTH_BYPASS=true` for the browser run
 
@@ -29,8 +31,11 @@ WORLDAI_DEV_MODE=true TESTING_AUTH_BYPASS=true python3 testing_ui/run_layer4_lev
 ```
 
 Expected outputs:
-- Real API harness summary ends with `Passed: 2`, `Failed: 0`, and an evidence directory under `/tmp/worldarchitect.ai/feat_zfc-level-up-model-computes/level_up_signal_real_api/iteration_002`
-- Browser harness summary ends with `TEST PASSED` and an evidence directory under `/tmp/worldarchitect.ai/level-up-integrated/iteration_007`
+- real API harness summary ends with `Passed: 2`, `Failed: 0`
+- browser harness summary ends with `TEST PASSED`
+- refreshed clean evidence roots are:
+  - `/tmp/worldarchitect.ai/unknown/level_up_signal_real_api/iteration_001`
+  - `/tmp/worldarchitect.ai/level-up-integrated/iteration_008/ui_level_up_rewards_planning_atomicity_browser/iteration_001`
 
 ## Browser media
 
@@ -52,7 +57,3 @@ Expected outputs:
 - `browser_run.json`
 - `browser_trace.json`
 - `pending_level_up_projection_response.json`
-
-## Dirty worktree note
-
-The evidence was captured in a dirty worktree because unrelated local `.beads/`, roadmap/wiki, and test-file changes were intentionally preserved rather than reverted.

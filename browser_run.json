@@ -5,26 +5,26 @@
     {
       "name": "pending_level_up_projection",
       "passed": true,
-      "campaign_id": "C7hD8r2mAkPCOXz0zx1L",
+      "campaign_id": "BTryrm6vn2lx6lf4DdjF",
       "latest_choice_ids": [
         "level_up_now",
         "continue_adventuring",
         "finish_level_up_return_to_game",
         "__custom_action__"
       ],
-      "latest_rewards_text": "\u2728 REWARDS (milestone):\n+50 XP | XP: 350/900 (39%)\n\ud83c\udf89 LEVEL UP AVAILABLE!"
+      "latest_rewards_text": "\u2728 REWARDS (browser_test):\n+50 XP | XP: 350/900 (39%)\n\ud83c\udf89 LEVEL UP AVAILABLE!"
     }
   ],
   "errors": [],
-  "campaign_id": "C7hD8r2mAkPCOXz0zx1L",
-  "user_id": "layer4-evidence-20260422T225759Z",
+  "campaign_id": "BTryrm6vn2lx6lf4DdjF",
+  "user_id": "layer4-evidence-20260422T231919Z",
   "video_artifacts": {
     "videos": [
-      "/tmp/worldarchitect.ai/level-up-integrated/iteration_007/ui_level_up_rewards_planning_atomicity_browser/iteration_001/artifacts/videos/b7612865f460ca5d6b1216eca8c34301.webm"
+      "/tmp/worldarchitect.ai/level-up-integrated/iteration_008/ui_level_up_rewards_planning_atomicity_browser/iteration_001/artifacts/videos/689453f91f0a75d43ab04147d0229e21.webm"
     ],
     "subtitles": [
-      "/tmp/worldarchitect.ai/level-up-integrated/iteration_007/ui_level_up_rewards_planning_atomicity_browser/iteration_001/artifacts/videos/b7612865f460ca5d6b1216eca8c34301.vtt",
-      "/tmp/worldarchitect.ai/level-up-integrated/iteration_007/ui_level_up_rewards_planning_atomicity_browser/iteration_001/artifacts/videos/ui_level_up_rewards_planning_atomicity_browser_layer4-evidence-20260422t225759z_42771.vtt"
+      "/tmp/worldarchitect.ai/level-up-integrated/iteration_008/ui_level_up_rewards_planning_atomicity_browser/iteration_001/artifacts/videos/689453f91f0a75d43ab04147d0229e21.vtt",
+      "/tmp/worldarchitect.ai/level-up-integrated/iteration_008/ui_level_up_rewards_planning_atomicity_browser/iteration_001/artifacts/videos/ui_level_up_rewards_planning_atomicity_browser_layer4-evidence-20260422t231919z_44060.vtt"
     ]
   }
 }

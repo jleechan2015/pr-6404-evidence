@@ -15,23 +15,35 @@
     "safe_count": 0,
     "status": "pass",
     "suspicious_count": 0,
-    "turn_number": 2
+    "turn_number": 1
   },
   "_invariant_violations": [],
-  "_turn_number": 2,
+  "_turn_number": 1,
   "action_resolution": {
-    "audit_flags": [
-      "intent_statement"
-    ],
-    "interpreted_as": "introspection_and_planning",
+    "audit_flags": [],
+    "interpreted_as": "contemplation_and_planning",
     "mechanics": {
       "audit_events": [
-        "Player initiated character reflection and level-up transition"
+        "Intelligence check (10) vs DC 10: Success (Competent tier)"
       ],
-      "rolls": [],
-      "type": "other"
+      "rolls": [
+        {
+          "dc": 10,
+          "dc_category": "Standard",
+          "dc_reasoning": "Standard planning check in a familiar environment (The Great Library)",
+          "die_type": "d20",
+          "margin": 0,
+          "modifier": 0,
+          "notation": "1d20+0",
+          "purpose": "Intelligence (Planning)",
+          "result": 10,
+          "success": true,
+          "total": 10
+        }
+      ],
+      "type": "skill_check"
     },
-    "narrative_outcome": "Aric assesses his surroundings and newfound strength.",
+    "narrative_outcome": "Aric takes a moment to assess his surroundings and his own growing strength.",
     "player_input": "I pause to take stock of what I just learned and the power now within reach.",
     "reinterpreted": false
   },
@@ -43,9 +55,8 @@
   "dice_audit_events": [],
   "dice_rolls": [],
   "entities_mentioned": [
-    "Aric (Lvl 2)",
-    "Elin (Lvl 2)",
-    "Master Thorne (Lvl 12)"
+    "Aric (Lvl 1)",
+    "A Nervous Scribe (Lvl 1)"
   ],
   "entries_cleaned": 0,
   "game_state": {
@@ -60,15 +71,15 @@
       },
       "active_constraints": [],
       "arc_milestones": {},
-      "attribute_system": "standard",
+      "attribute_system": "D&D",
       "campaign_tier": "mortal",
       "character_creation_completed": true,
       "character_creation_in_progress": false,
       "character_creation_stage": "complete",
       "companion_arcs": {},
       "core_memories": [
-        "[auto] Morning (08:05:00) in The Great Library\u2014the golden sunlight of Hammer filters through the high, arched windows, illuminating millions of dust motes that dance above the endless rows of oak shelves. Aric (Lvl 1), a scholar whose calloused hands speak of combat training just as much as his ink-stained fingers speak of study, sits at a heavy mahogany desk cluttered with half-rolled parchments. The air is thick with the scent of aged vellum, cedarwood, and the faint, ozone-tang of residual ma",
-        "[auto] Morning (08:05:00) in The Great Library\u2014you pause, the ink drying on your quill as Elin's (Lvl 2) whispered rumor sinks in. You take a slow, deep breath, feeling a sudden sharpening of your senses and a steadying of your pulse. The rigorous combat drills you've maintained alongside your studies seem to coalesce into a new reservoir of martial potential. You feel capable of pushing your body beyond its normal limits\u2014a burst of speed and power you've only glimpsed in training. \n\nElin (Lvl 2"
+        "[auto] Morning (08:05:00) in The Great Library\u2014the air is thick with the scent of vellum, beeswax, and the dry, sweet dust of centuries. Shafts of pale sunlight pierce the high, stained-glass windows, illuminating billions of dust motes dancing in the silence. You, Aric (Lvl 1), stand amidst towering mahogany shelves that stretch upward into shadow, their contents representing the collective memory of a dozen fallen empires.\n\nThe silence is not absolute; it is a heavy, expectant thing, broken on",
+        "[auto] Morning (08:05:00) in The Great Library\u2014You stand motionless between the towering shelves, the smell of old paper and dust filling your lungs as you let the events of the last few minutes settle. The terrified look on the young scribe's face as he hurried toward the Restricted Section remains etched in your mind, and the cryptic incantation you overheard still echoes faintly in the heavy silence. You feel a new strength stirring within you\u2014the fruit of your recent studies and the harsh le"
       ],
       "divine_potential": 0,
       "divine_upgrade_available": false,
@@ -87,12 +98,13 @@
       "last_location": "The Great Library",
       "last_story_mode_sequence_id": 6,
       "level_up_in_progress": true,
-      "level_up_pending": false,
+      "level_up_pending": true,
       "multiverse_upgrade_available": false,
       "next_companion_arc_turn": 3,
       "player_character_data_extras": {
         "description": "Browser test campaign"
       },
+      "success_streak": 0,
       "universe_control": 0
     },
     "debug_mode": true,
@@ -109,45 +121,19 @@
     "game_state_version": 1,
     "item_registry": {},
     "last_living_world_time": {
-      "day": 1,
+      "day": 15,
       "hour": 8,
       "microsecond": 0,
       "minute": 5,
-      "month": "Hammer",
+      "month": "Mirtul",
       "second": 0,
       "time_of_day": "morning",
       "year": 1492
     },
-    "last_living_world_turn": 2,
+    "last_living_world_turn": 1,
     "last_state_update_timestamp": "<SERVER_TIMESTAMP>",
     "npc_agendas": {},
     "npc_data": {
-      "Elin": {
-        "display_name": "Elin",
-        "entity_id": "npc_elin_001",
-        "level": 2,
-        "relationships": {
-          "player": {
-            "disposition": "friendly",
-            "trust_level": 1
-          }
-        },
-        "role": "Scribe",
-        "tier": "commoner"
-      },
-      "Master Thorne": {
-        "display_name": "Master Thorne",
-        "entity_id": "npc_thorne_001",
-        "level": 12,
-        "relationships": {
-          "player": {
-            "disposition": "neutral",
-            "trust_level": 0
-          }
-        },
-        "role": "Head Archivist",
-        "tier": "lord"
-      },
       "npc_goblin_001": {
         "armor_class": 13,
         "hp_current": 7,
@@ -187,8 +173,14 @@
       "level": 2,
       "level_up_choices": [
         {
-          "description": "You can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action. Once you use this feature, you must finish a short or long rest before you can use it again.",
-          "feature": "Action Surge"
+          "description": "You can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action.",
+          "id": "action_surge",
+          "text": "Action Surge"
+        },
+        {
+          "description": "Your Maximum Hit Points increase by 1d10 + Constitution modifier (or 6 + mod).",
+          "id": "hit_points_increase",
+          "text": "Vitality Increase"
         }
       ],
       "thinking": "The model determined that level-up is available; present the player with level-up controls."
@@ -254,20 +246,16 @@
       },
       "experience": {
         "current": 350,
-        "to_next_level": 900
+        "to_next_level": 300
       },
-      "features": [
-        "Second Wind",
-        "Action Surge"
-      ],
-      "hp_current": 16,
-      "hp_max": 16,
-      "level": 2,
+      "hp_current": 12,
+      "hp_max": 12,
+      "level": 1,
       "name": "Aric",
       "proficiency_bonus": 2,
       "string_id": "pc_aric_001"
     },
-    "player_turn": 2,
+    "player_turn": 1,
     "rewards_pending": {
       "level_up_available": true,
       "new_level": 2,
@@ -279,39 +267,38 @@
     "rumors": [
       {
         "accuracy": "partial",
-        "content": "They say the basement levels aren't as empty as the maps suggest.",
-        "related_event": "Basement Entity Movement",
+        "content": "They say the books in the West Wing move when you aren't looking.",
+        "related_event": "North Wing flickering light",
         "scene_generated": 2,
         "source_type": "commoner",
-        "turn_generated": 2
+        "turn_generated": 1
       }
     ],
     "scene_event": {
-      "actor": "Elin (Lvl 2)",
-      "description": "The young scribe approaches with a rumor about the basement.",
+      "actor": "A Nervous Scribe (Lvl 1)",
+      "description": "A young scribe with ink-stained fingers rushes past you, nearly knocking over your stool. He looks terrified and keeps glancing toward the Restricted Section.",
       "player_response_required": true,
       "scene_generated": 2,
-      "turn_generated": 2,
+      "turn_generated": 1,
       "type": "messenger",
-      "urgency": "low"
+      "urgency": "immediate"
     },
-    "schema_migrated_at": "2026-04-22T22:58:29.301513+00:00",
+    "schema_migrated_at": "2026-04-22T23:20:00.979802+00:00",
     "schema_migration_version": 1,
-    "session_id": "layer4-evidence-20260422T225759Z",
+    "session_id": "layer4-evidence-20260422T231919Z",
     "social_hp_challenge": null,
     "time_pressure_warnings": {},
     "time_sensitive_events": {},
-    "turn_number": 2,
-    "user_id": "layer4-evidence-20260422T225759Z",
+    "turn_number": 1,
+    "user_id": "layer4-evidence-20260422T231919Z",
     "world_data": {
       "current_location_name": "The Great Library",
-      "location": "The Great Library",
       "world_time": {
-        "day": 1,
+        "day": 15,
         "hour": 8,
         "microsecond": 1,
         "minute": 5,
-        "month": "Hammer",
+        "month": "Mirtul",
         "second": 0,
         "time_of_day": "morning",
         "year": 1492
@@ -320,99 +307,117 @@
     "world_events": {
       "background_events": [
         {
-          "action": "Frantically searching for a misfiled tome in the alchemy wing.",
-          "actor": "Apprentice Scribe",
-          "discovery_condition": "Player visits the alchemy wing",
+          "action": "Bribed a junior scribe for access to the restricted vaults",
+          "actor": "Zhentarim Agents",
+          "discovery_condition": "Player finds the nervous scribe or notices missing keys",
           "event_type": "immediate",
-          "location": "The Great Library - Alchemy Wing",
-          "outcome": "Increased noise and minor disruption in that area.",
+          "location": "The Great Library, Lower Levels",
+          "outcome": "A copy of the vault keys was successfully forged",
           "player_aware": false,
-          "player_impact": "DC increase to stealth/concentration in that wing",
+          "player_impact": "The library security will be compromised soon",
           "scene_generated": 2,
           "status": "pending",
-          "turn_generated": 2
+          "turn_generated": 1
         },
         {
-          "action": "A draft whistles through a loose pane, extinguishing candles.",
-          "actor": "Library Window",
-          "discovery_condition": "Visible change in lighting",
+          "action": "Requested an emergency audit of all First Age texts",
+          "actor": "High Mage Valthun",
+          "discovery_condition": "Messengers arrive at the library",
           "event_type": "immediate",
-          "location": "The Great Library - Main Hall",
-          "outcome": "A distant section of the library falls into shadow.",
-          "player_aware": true,
-          "player_impact": "Atmospheric change",
+          "location": "Silverymoon",
+          "outcome": "Orders are traveling toward the Great Library",
+          "player_aware": false,
+          "player_impact": "Access to Aric's research material may be restricted within hours",
           "scene_generated": 2,
-          "status": "discovered",
-          "turn_generated": 2
+          "status": "pending",
+          "turn_generated": 1
         },
         {
-          "action": "Walking toward the Restricted Section with a heavy iron key.",
-          "actor": "Master Thorne (Lvl 12)",
-          "discovery_condition": "Direct witness",
+          "action": "Reported a flickering blue light in the North Wing at night",
+          "actor": "Library Scribes",
+          "discovery_condition": "Overheard gossip in the library common room",
           "event_type": "immediate",
-          "location": "The Great Library - Central Hub",
-          "outcome": "The Restricted Section is temporarily opened.",
-          "player_aware": true,
-          "player_impact": "Opportunity for infiltration or observation",
+          "location": "The Great Library, North Wing",
+          "outcome": "Dismissed as 'arcane residue' by the Head Librarian",
+          "player_aware": false,
+          "player_impact": "Indicates a potential haunt or rift in the library",
           "scene_generated": 2,
-          "status": "discovered",
-          "turn_generated": 2
+          "status": "pending",
+          "turn_generated": 1
         },
         {
-          "action": "Beginning to monitor the library perimeter for an artifact.",
-          "actor": "Shadow Monks Faction",
-          "discovery_condition": "Successful Investigation/Perception check of the exterior",
+          "action": "Began infiltrating the merchant guilds of Waterdeep",
+          "actor": "The Cult of the Dragon",
+          "discovery_condition": "Rumors of shifting trade prices or missing shipments",
           "event_type": "long_term",
-          "location": "Library Exterior",
-          "outcome": "Perimeter security is compromised by third parties.",
+          "location": "Waterdeep",
+          "outcome": "Acquired three warehouses for secret shipments",
           "player_aware": false,
-          "player_impact": "Future complication/hostile encounter",
+          "player_impact": "Will affect resource availability in the region in 15+ turns",
           "scene_generated": 2,
           "status": "pending",
-          "turn_generated": 2
+          "turn_generated": 1
         }
-      ],
-      "turn_generated": 1
+      ]
     },
     "world_resources": {
-      "last_note": "HD: 2/2, Second Wind: 1/1, Action Surge: 1/1"
+      "last_note": "HD: 1/1, Spells: None (Lvl 1 Fighter)"
     }
   },
   "level_up_signal": {
     "choices": [
       {
-        "description": "You can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action. Once you use this feature, you must finish a short or long rest before you can use it again.",
-        "feature": "Action Surge"
+        "description": "You can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action.",
+        "id": "action_surge",
+        "text": "Action Surge"
+      },
+      {
+        "description": "Your Maximum Hit Points increase by 1d10 + Constitution modifier (or 6 + mod).",
+        "id": "hit_points_increase",
+        "text": "Vitality Increase"
       }
     ],
     "level_up": true,
     "new_level": 2,
     "rewards": {
       "gold": 0,
-      "hp_increase": 4,
-      "loot": []
+      "loot": [
+        "None"
+      ]
     },
-    "source": "milestone",
+    "source": "browser_test",
     "xp_earned": 50,
     "xp_to_next_level": 900,
     "xp_total": 350
   },
   "location_confirmed": "The Great Library",
   "mode": "character",
-  "narrative": "Morning (08:05:00) in The Great Library\u2014you pause, the ink drying on your quill as Elin's (Lvl 2) whispered rumor sinks in. You take a slow, deep breath, feeling a sudden sharpening of your senses and a steadying of your pulse. The rigorous combat drills you've maintained alongside your studies seem to coalesce into a new reservoir of martial potential. You feel capable of pushing your body beyond its normal limits\u2014a burst of speed and power you've only glimpsed in training. \n\nElin (Lvl 2) lingers for a moment, her eyes darting toward the heavy iron-bound doors of the basement stairs. Master Thorne (Lvl 12) has already vanished into the stacks toward the Restricted Section, his rhythmic cane-clacks echoing faintly through the hall. The library, once a sanctuary of quiet study, suddenly feels like a labyrinth of secrets waiting to be unraveled. You have the knowledge of the rumors, the observation of the Archivist, and a newfound strength within you.\n\n**LEVEL UP AVAILABLE!** You have earned enough experience to reach Level 2!\nBenefits: Apply level 2 benefits now.\nWould you like to level up now?\nOptions: 1. Level up immediately  2. Continue adventuring\nIf you continue adventuring, you remain Level 2 and defer these benefits until you choose to level up.\n\nBenefits: Apply level 2 benefits now.",
+  "narrative": "Morning (08:05:00) in The Great Library\u2014You stand motionless between the towering shelves, the smell of old paper and dust filling your lungs as you let the events of the last few minutes settle. The terrified look on the young scribe's face as he hurried toward the Restricted Section remains etched in your mind, and the cryptic incantation you overheard still echoes faintly in the heavy silence. You feel a new strength stirring within you\u2014the fruit of your recent studies and the harsh lessons of your past experiences beginning to crystallize into greater martial prowess. For a moment, the vast knowledge surrounding you feels less like a burden and more like a tool, waiting for you to sharpen your focus.\n\n**LEVEL UP AVAILABLE!** You have earned enough experience to reach Level 2!\nBenefits: Apply level 2 benefits now.\nWould you like to level up now?\nOptions: 1. Level up immediately  2. Continue adventuring\nIf you continue adventuring, you remain Level 1 and defer these benefits until you choose to level up.\n\nBenefits: Apply level 2 benefits now.",
   "outcome_resolution": {
-    "audit_flags": [
-      "intent_statement"
-    ],
-    "interpreted_as": "introspection_and_planning",
+    "audit_flags": [],
+    "interpreted_as": "contemplation_and_planning",
     "mechanics": {
       "audit_events": [
-        "Player initiated character reflection and level-up transition"
+        "Intelligence check (10) vs DC 10: Success (Competent tier)"
       ],
-      "rolls": [],
-      "type": "other"
+      "rolls": [
+        {
+          "dc": 10,
+          "dc_category": "Standard",
+          "dc_reasoning": "Standard planning check in a familiar environment (The Great Library)",
+          "die_type": "d20",
+          "margin": 0,
+          "modifier": 0,
+          "notation": "1d20+0",
+          "purpose": "Intelligence (Planning)",
+          "result": 10,
+          "success": true,
+          "total": 10
+        }
+      ],
+      "type": "skill_check"
     },
-    "narrative_outcome": "Aric assesses his surroundings and newfound strength.",
+    "narrative_outcome": "Aric takes a moment to assess his surroundings and his own growing strength.",
     "player_input": "I pause to take stock of what I just learned and the power now within reach.",
     "reinterpreted": false
   },
@@ -444,26 +449,38 @@
     "level": 2,
     "level_up_choices": [
       {
-        "description": "You can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action. Once you use this feature, you must finish a short or long rest before you can use it again.",
-        "feature": "Action Surge"
+        "description": "You can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action.",
+        "id": "action_surge",
+        "text": "Action Surge"
+      },
+      {
+        "description": "Your Maximum Hit Points increase by 1d10 + Constitution modifier (or 6 + mod).",
+        "id": "hit_points_increase",
+        "text": "Vitality Increase"
       }
     ],
     "thinking": "The model determined that level-up is available; present the player with level-up controls."
   },
   "processing_metadata": {
-    "raw_response_text": "{\n  \"session_header\": \"[SESSION_HEADER]\\nTimestamp: 1492 DR, Hammer 1, 08:05:00\\nLocation: The Great Library\\nStatus: Lvl 2 Fighter | HP: 16/16 | XP: 350/900 | Gold: 10gp\\nConditions: Normal | Exhaustion: 0 | Inspiration: No\",\n  \"resources\": \"HD: 2/2, Second Wind: 1/1, Action Surge: 1/1\",\n  \"narrative\": \"Morning (08:05:00) in The Great Library\u2014you pause, the ink drying on your quill as Elin's (Lvl 2) whispered rumor sinks in. You take a slow, deep breath, feeling a sudden sharpening of your senses and a steadying of your pulse. The rigorous combat drills you've maintained alongside your studies seem to coalesce into a new reservoir of martial potential. You feel capable of pushing your body beyond its normal limits\u2014a burst of speed and power you've only glimpsed in training. \\n\\nElin (Lvl 2) lingers for a moment, her eyes darting toward the heavy iron-bound doors of the basement stairs. Master Thorne (Lvl 12) has already vanished into the stacks toward the Restricted Section, his rhythmic cane-clacks echoing faintly through the hall. The library, once a sanctuary of quiet study, suddenly feels like a labyrinth of secrets waiting to be unraveled. You have the knowledge of the rumors, the observation of the Archivist, and a newfound strength within you.\",\n  \"planning_block\": {\n    \"thinking\": \"The player has reached Level 2, gaining Action Surge and increased durability. Elin has provided a localized hook (the basement), while Master Thorne presents a more mysterious lead toward the Restricted Section. The 'taking stock' action represents a transition from Level 1 to Level 2 and an assessment of the current environment.\",\n    \"context\": \"Post-level-up assessment in the library\",\n    \"choices\": [\n      {\n        \"id\": \"talk_to_elin\",\n        \"text\": \"Question Elin Further\",\n        \"description\": \"Ask the young scribe for more details about exactly where and when the ledgers were moved.\",\n        \"risk_level\": \"safe\",\n        \"pros\": [\"Gain specific tactical information\", \"Build relationship with Elin\"],\n        \"cons\": [\"Might be seen gossiping during study hours\"],\n        \"confidence\": \"high\"\n      },\n      {\n        \"id\": \"follow_thorne\",\n        \"text\": \"Discreetly Follow Master Thorne\",\n        \"description\": \"Use the stacks for cover and see which door the Head Archivist's iron key unlocks.\",\n        \"risk_level\": \"medium\",\n        \"pros\": [\"Discover restricted lore\", \"Learn Thorne's routine\"],\n        \"cons\": [\"Thorne (Lvl 12) is highly perceptive\", \"Risk of being banned from the library\"],\n        \"confidence\": \"medium\"\n      },\n      {\n        \"id\": \"investigate_basement\",\n        \"text\": \"Head to the Basement Stairs\",\n        \"description\": \"Directly investigate the site of the disturbances Elin mentioned.\",\n        \"risk_level\": \"medium\",\n        \"pros\": [\"Direct approach to the mystery\", \"Less likely to be watched than the Restricted Section\"],\n        \"cons\": [\"Uncertain dangers in the lower levels\"],\n        \"confidence\": \"medium\"\n      },\n      {\n        \"id\": \"parallel_investigation\",\n        \"text\": \"Observe Thorne while Questioning Elin (Synergistic)\",\n        \"description\": \"Keep Elin talking to maintain a 'natural' appearance while keeping a sharp eye on Thorne's path.\",\n        \"risk_level\": \"low\",\n        \"pros\": [\"Maximum information gain\", \"Maintains cover\", \"Synergy: Elin's presence masks your surveillance of Thorne\"],\n        \"cons\": [\"Requires split focus\"],\n        \"confidence\": \"high\",\n        \"analysis\": {\n          \"combination_type\": \"synergistic\",\n          \"synergy_bonus\": \"The social interaction provides a perfect excuse to be standing near the Restricted Section corridor.\",\n          \"dc_modifier\": 0,\n          \"coordination_dc\": 12\n        }\n      }\n    ]\n  },\n  \"level_up_signal\": {\n    \"level_up\": true,\n    \"new_level\": 2,\n    \"xp_earned\": 50,\n    \"xp_total\": 350,\n    \"xp_to_next_level\": 900,\n    \"source\": \"milestone\",\n    \"choices\": [\n      {\n        \"feature\": \"Action Surge\",\n        \"description\": \"You can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action. Once you use this feature, you must finish a short or long rest before you can use it again.\"\n      }\n    ],\n    \"rewards\": {\n      \"hp_increase\": 4,\n      \"gold\": 0,\n      \"loot\": []\n    }\n  },\n  \"rewards_box\": {\n    \"source\": \"milestone\",\n    \"xp_gained\": 50,\n    \"current_xp\": 350,\n    \"next_level_xp\": 900,\n    \"progress_percent\": 38,\n    \"level_up_available\": false,\n    \"loot\": [\"None\"],\n    \"gold\": 0\n  },\n  \"action_resolution\": {\n    \"player_input\": \"I pause to take stock of what I just learned and the power now within reach.\",\n    \"interpreted_as\": \"introspection_and_planning\",\n    \"reinterpreted\": false,\n    \"mechanics\": {\n      \"type\": \"other\",\n      \"rolls\": [],\n      \"audit_events\": [\"Player initiated character reflection and level-up transition\"]\n    },\n    \"audit_flags\": [\"intent_statement\"],\n    \"narrative_outcome\": \"Aric assesses his surroundings and newfound strength.\"\n  },\n  \"state_updates\": {\n    \"player_character_data\": {\n      \"level\": 2,\n      \"hp_max\": 16,\n      \"hp_current\": 16,\n      \"experience\": {\n        \"current\": 350,\n        \"to_next_level\": 900\n      },\n      \"features\": [\"Second Wind\", \"Action Surge\"]\n    },\n    \"world_data\": {\n      \"world_time\": {\n        \"microsecond\": 1\n      }\n    },\n    \"custom_campaign_state\": {\n      \"level_up_pending\": false,\n      \"level_up_in_progress\": false\n    }\n  },\n  \"entities_mentioned\": [\"Aric (Lvl 2)\", \"Elin (Lvl 2)\", \"Master Thorne (Lvl 12)\"],\n  \"location_confirmed\": \"The Great Library\",\n  \"god_mode_response\": \"\"\n}"
+    "raw_response_text": "{\n  \"session_header\": \"[Mode: STORY MODE]\\n[SESSION_HEADER]\\nTimestamp: 1492 DR, Mirtul 15, 08:05:00\\nLocation: The Great Library\\nStatus: Lvl 1 Fighter | HP: 12/12 | XP: 350/900 | Gold: 10gp\\nConditions: Normal | Exhaustion: 0 | Inspiration: No\",\n  \"resources\": \"HD: 1/1, Spells: None (Lvl 1 Fighter)\",\n  \"narrative\": \"Morning (08:05:00) in The Great Library\u2014You stand motionless between the towering shelves, the smell of old paper and dust filling your lungs as you let the events of the last few minutes settle. The terrified look on the young scribe's face as he hurried toward the Restricted Section remains etched in your mind, and the cryptic incantation you overheard still echoes faintly in the heavy silence. You feel a new strength stirring within you\u2014the fruit of your recent studies and the harsh lessons of your past experiences beginning to crystallize into greater martial prowess. For a moment, the vast knowledge surrounding you feels less like a burden and more like a tool, waiting for you to sharpen your focus.\",\n  \"planning_block\": {\n    \"thinking\": \"The situation in the library has shifted from a quiet research trip to something potentially more dangerous. The nervous scribe and the sounds from the neighboring aisle suggest an immediate disturbance, while the broader goal of finding information on the Star-Callers remains the primary objective. The feeling of growth suggests that now might be an opportune moment to consolidate your skills before proceeding.\",\n    \"context\": \"Reflecting on current leads and personal growth within the Great Library\",\n    \"plan_quality\": {\n      \"stat_used\": \"Intelligence\",\n      \"stat_value\": 10,\n      \"modifier\": \"+0 INT\",\n      \"roll_result\": 10,\n      \"dc\": 10,\n      \"dc_category\": \"Standard\",\n      \"dc_reasoning\": \"Standard planning check in a familiar environment (The Great Library)\",\n      \"success\": true,\n      \"margin\": 0,\n      \"quality_tier\": \"Competent\",\n      \"effect\": \"Your analysis is sound, providing a clear view of the immediate options without distraction.\"\n    },\n    \"choices\": [\n      {\n        \"id\": \"level_up_now\",\n        \"text\": \"Embrace Your Growth (Level Up)\",\n        \"description\": \"Take a moment of internal focus to reach Level 2, gaining Action Surge and increased vitality.\",\n        \"risk_level\": \"safe\",\n        \"freeze_time\": true,\n        \"pros\": [\n          \"Immediate increase in power\",\n          \"Gain Action Surge feature\",\n          \"Higher HP for upcoming challenges\"\n        ],\n        \"cons\": [\n          \"Does not advance the search for knowledge directly\"\n        ],\n        \"confidence\": \"high\"\n      },\n      {\n        \"id\": \"investigate_scribe\",\n        \"text\": \"Follow the Nervous Scribe\",\n        \"description\": \"Quietly pursue the scribe who hurried toward the Restricted Section to see what has him so frightened.\",\n        \"risk_level\": \"medium\",\n        \"pros\": [\n          \"May uncover a library secret\",\n          \"Potential lead on the forged keys\"\n        ],\n        \"cons\": [\n          \"Risk of discovery in a restricted area\",\n          \"Distracts from the Star-Caller research\"\n        ],\n        \"confidence\": \"medium\"\n      },\n      {\n        \"id\": \"search_archives\",\n        \"text\": \"Focus on Star-Caller Records\",\n        \"description\": \"Ignore the distractions and redouble your efforts to find the mention of the Star-Callers in the First Age annals.\",\n        \"risk_level\": \"low\",\n        \"pros\": [\n          \"Direct progress on primary objective\",\n          \"Maintains low profile\"\n        ],\n        \"cons\": [\n          \"May miss a time-sensitive event regarding the scribe\"\n        ],\n        \"confidence\": \"high\"\n      }\n    ],\n    \"analysis\": {\n      \"recommended_approach\": \"level_up_now\",\n      \"reasoning\": \"With potential danger looming in the Restricted Section and an audit potentially restricting access soon, being at your full potential is the safest strategy.\",\n      \"contingency\": \"If the scribe's behavior leads to a lockdown, you will need to rely on your improved physical capabilities to navigate the library's more clandestine routes.\"\n    }\n  },\n  \"action_resolution\": {\n    \"player_input\": \"I pause to take stock of what I just learned and the power now within reach.\",\n    \"interpreted_as\": \"contemplation_and_planning\",\n    \"reinterpreted\": false,\n    \"mechanics\": {\n      \"type\": \"skill_check\",\n      \"rolls\": [\n        {\n          \"notation\": \"1d20+0\",\n          \"result\": 10,\n          \"success\": true,\n          \"die_type\": \"d20\",\n          \"dc\": 10,\n          \"purpose\": \"Intelligence (Planning)\",\n          \"modifier\": 0,\n          \"total\": 10,\n          \"margin\": 0,\n          \"dc_category\": \"Standard\",\n          \"dc_reasoning\": \"Standard planning check in a familiar environment (The Great Library)\"\n        }\n      ],\n      \"audit_events\": [\n        \"Intelligence check (10) vs DC 10: Success (Competent tier)\"\n      ]\n    },\n    \"audit_flags\": [],\n    \"narrative_outcome\": \"Aric takes a moment to assess his surroundings and his own growing strength.\"\n  },\n  \"level_up_signal\": {\n    \"level_up\": true,\n    \"new_level\": 2,\n    \"xp_earned\": 50,\n    \"xp_total\": 350,\n    \"xp_to_next_level\": 900,\n    \"source\": \"browser_test\",\n    \"choices\": [\n      {\n        \"id\": \"action_surge\",\n        \"text\": \"Action Surge\",\n        \"description\": \"You can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action.\"\n      },\n      {\n        \"id\": \"hit_points_increase\",\n        \"text\": \"Vitality Increase\",\n        \"description\": \"Your Maximum Hit Points increase by 1d10 + Constitution modifier (or 6 + mod).\"\n      }\n    ],\n    \"rewards\": {\n      \"gold\": 0,\n      \"loot\": [\n        \"None\"\n      ]\n    }\n  },\n  \"rewards_box\": {\n    \"source\": \"milestone\",\n    \"xp_gained\": 50,\n    \"current_xp\": 350,\n    \"next_level_xp\": 900,\n    \"progress_percent\": 38,\n    \"level_up_available\": true,\n    \"loot\": [\n      \"None\"\n    ],\n    \"gold\": 0\n  },\n  \"state_updates\": {\n    \"world_data\": {\n      \"world_time\": {\n        \"year\": 1492,\n        \"month\": \"Mirtul\",\n        \"day\": 15,\n        \"hour\": 8,\n        \"minute\": 5,\n        \"second\": 0,\n        \"microsecond\": 1,\n        \"time_of_day\": \"morning\"\n      }\n    },\n    \"player_character_data\": {\n      \"experience\": {\n        \"current\": 350\n      }\n    }\n  },\n  \"entities_mentioned\": [\n    \"Aric (Lvl 1)\",\n    \"A Nervous Scribe (Lvl 1)\"\n  ],\n  \"location_confirmed\": \"The Great Library\",\n  \"god_mode_response\": \"\"\n}"
   },
-  "raw_response_text": "{\n  \"session_header\": \"[SESSION_HEADER]\\nTimestamp: 1492 DR, Hammer 1, 08:05:00\\nLocation: The Great Library\\nStatus: Lvl 2 Fighter | HP: 16/16 | XP: 350/900 | Gold: 10gp\\nConditions: Normal | Exhaustion: 0 | Inspiration: No\",\n  \"resources\": \"HD: 2/2, Second Wind: 1/1, Action Surge: 1/1\",\n  \"narrative\": \"Morning (08:05:00) in The Great Library\u2014you pause, the ink drying on your quill as Elin's (Lvl 2) whispered rumor sinks in. You take a slow, deep breath, feeling a sudden sharpening of your senses and a steadying of your pulse. The rigorous combat drills you've maintained alongside your studies seem to coalesce into a new reservoir of martial potential. You feel capable of pushing your body beyond its normal limits\u2014a burst of speed and power you've only glimpsed in training. \\n\\nElin (Lvl 2) lingers for a moment, her eyes darting toward the heavy iron-bound doors of the basement stairs. Master Thorne (Lvl 12) has already vanished into the stacks toward the Restricted Section, his rhythmic cane-clacks echoing faintly through the hall. The library, once a sanctuary of quiet study, suddenly feels like a labyrinth of secrets waiting to be unraveled. You have the knowledge of the rumors, the observation of the Archivist, and a newfound strength within you.\",\n  \"planning_block\": {\n    \"thinking\": \"The player has reached Level 2, gaining Action Surge and increased durability. Elin has provided a localized hook (the basement), while Master Thorne presents a more mysterious lead toward the Restricted Section. The 'taking stock' action represents a transition from Level 1 to Level 2 and an assessment of the current environment.\",\n    \"context\": \"Post-level-up assessment in the library\",\n    \"choices\": [\n      {\n        \"id\": \"talk_to_elin\",\n        \"text\": \"Question Elin Further\",\n        \"description\": \"Ask the young scribe for more details about exactly where and when the ledgers were moved.\",\n        \"risk_level\": \"safe\",\n        \"pros\": [\"Gain specific tactical information\", \"Build relationship with Elin\"],\n        \"cons\": [\"Might be seen gossiping during study hours\"],\n        \"confidence\": \"high\"\n      },\n      {\n        \"id\": \"follow_thorne\",\n        \"text\": \"Discreetly Follow Master Thorne\",\n        \"description\": \"Use the stacks for cover and see which door the Head Archivist's iron key unlocks.\",\n        \"risk_level\": \"medium\",\n        \"pros\": [\"Discover restricted lore\", \"Learn Thorne's routine\"],\n        \"cons\": [\"Thorne (Lvl 12) is highly perceptive\", \"Risk of being banned from the library\"],\n        \"confidence\": \"medium\"\n      },\n      {\n        \"id\": \"investigate_basement\",\n        \"text\": \"Head to the Basement Stairs\",\n        \"description\": \"Directly investigate the site of the disturbances Elin mentioned.\",\n        \"risk_level\": \"medium\",\n        \"pros\": [\"Direct approach to the mystery\", \"Less likely to be watched than the Restricted Section\"],\n        \"cons\": [\"Uncertain dangers in the lower levels\"],\n        \"confidence\": \"medium\"\n      },\n      {\n        \"id\": \"parallel_investigation\",\n        \"text\": \"Observe Thorne while Questioning Elin (Synergistic)\",\n        \"description\": \"Keep Elin talking to maintain a 'natural' appearance while keeping a sharp eye on Thorne's path.\",\n        \"risk_level\": \"low\",\n        \"pros\": [\"Maximum information gain\", \"Maintains cover\", \"Synergy: Elin's presence masks your surveillance of Thorne\"],\n        \"cons\": [\"Requires split focus\"],\n        \"confidence\": \"high\",\n        \"analysis\": {\n          \"combination_type\": \"synergistic\",\n          \"synergy_bonus\": \"The social interaction provides a perfect excuse to be standing near the Restricted Section corridor.\",\n          \"dc_modifier\": 0,\n          \"coordination_dc\": 12\n        }\n      }\n    ]\n  },\n  \"level_up_signal\": {\n    \"level_up\": true,\n    \"new_level\": 2,\n    \"xp_earned\": 50,\n    \"xp_total\": 350,\n    \"xp_to_next_level\": 900,\n    \"source\": \"milestone\",\n    \"choices\": [\n      {\n        \"feature\": \"Action Surge\",\n        \"description\": \"You can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action. Once you use this feature, you must finish a short or long rest before you can use it again.\"\n      }\n    ],\n    \"rewards\": {\n      \"hp_increase\": 4,\n      \"gold\": 0,\n      \"loot\": []\n    }\n  },\n  \"rewards_box\": {\n    \"source\": \"milestone\",\n    \"xp_gained\": 50,\n    \"current_xp\": 350,\n    \"next_level_xp\": 900,\n    \"progress_percent\": 38,\n    \"level_up_available\": false,\n    \"loot\": [\"None\"],\n    \"gold\": 0\n  },\n  \"action_resolution\": {\n    \"player_input\": \"I pause to take stock of what I just learned and the power now within reach.\",\n    \"interpreted_as\": \"introspection_and_planning\",\n    \"reinterpreted\": false,\n    \"mechanics\": {\n      \"type\": \"other\",\n      \"rolls\": [],\n      \"audit_events\": [\"Player initiated character reflection and level-up transition\"]\n    },\n    \"audit_flags\": [\"intent_statement\"],\n    \"narrative_outcome\": \"Aric assesses his surroundings and newfound strength.\"\n  },\n  \"state_updates\": {\n    \"player_character_data\": {\n      \"level\": 2,\n      \"hp_max\": 16,\n      \"hp_current\": 16,\n      \"experience\": {\n        \"current\": 350,\n        \"to_next_level\": 900\n      },\n      \"features\": [\"Second Wind\", \"Action Surge\"]\n    },\n    \"world_data\": {\n      \"world_time\": {\n        \"microsecond\": 1\n      }\n    },\n    \"custom_campaign_state\": {\n      \"level_up_pending\": false,\n      \"level_up_in_progress\": false\n    }\n  },\n  \"entities_mentioned\": [\"Aric (Lvl 2)\", \"Elin (Lvl 2)\", \"Master Thorne (Lvl 12)\"],\n  \"location_confirmed\": \"The Great Library\",\n  \"god_mode_response\": \"\"\n}",
-  "resources": "HD: 2/2, Second Wind: 1/1, Action Surge: 1/1",
-  "response": "Morning (08:05:00) in The Great Library\u2014you pause, the ink drying on your quill as Elin's (Lvl 2) whispered rumor sinks in. You take a slow, deep breath, feeling a sudden sharpening of your senses and a steadying of your pulse. The rigorous combat drills you've maintained alongside your studies seem to coalesce into a new reservoir of martial potential. You feel capable of pushing your body beyond its normal limits\u2014a burst of speed and power you've only glimpsed in training. \n\nElin (Lvl 2) lingers for a moment, her eyes darting toward the heavy iron-bound doors of the basement stairs. Master Thorne (Lvl 12) has already vanished into the stacks toward the Restricted Section, his rhythmic cane-clacks echoing faintly through the hall. The library, once a sanctuary of quiet study, suddenly feels like a labyrinth of secrets waiting to be unraveled. You have the knowledge of the rumors, the observation of the Archivist, and a newfound strength within you.\n\n**LEVEL UP AVAILABLE!** You have earned enough experience to reach Level 2!\nBenefits: Apply level 2 benefits now.\nWould you like to level up now?\nOptions: 1. Level up immediately  2. Continue adventuring\nIf you continue adventuring, you remain Level 2 and defer these benefits until you choose to level up.\n\nBenefits: Apply level 2 benefits now.",
+  "raw_response_text": "{\n  \"session_header\": \"[Mode: STORY MODE]\\n[SESSION_HEADER]\\nTimestamp: 1492 DR, Mirtul 15, 08:05:00\\nLocation: The Great Library\\nStatus: Lvl 1 Fighter | HP: 12/12 | XP: 350/900 | Gold: 10gp\\nConditions: Normal | Exhaustion: 0 | Inspiration: No\",\n  \"resources\": \"HD: 1/1, Spells: None (Lvl 1 Fighter)\",\n  \"narrative\": \"Morning (08:05:00) in The Great Library\u2014You stand motionless between the towering shelves, the smell of old paper and dust filling your lungs as you let the events of the last few minutes settle. The terrified look on the young scribe's face as he hurried toward the Restricted Section remains etched in your mind, and the cryptic incantation you overheard still echoes faintly in the heavy silence. You feel a new strength stirring within you\u2014the fruit of your recent studies and the harsh lessons of your past experiences beginning to crystallize into greater martial prowess. For a moment, the vast knowledge surrounding you feels less like a burden and more like a tool, waiting for you to sharpen your focus.\",\n  \"planning_block\": {\n    \"thinking\": \"The situation in the library has shifted from a quiet research trip to something potentially more dangerous. The nervous scribe and the sounds from the neighboring aisle suggest an immediate disturbance, while the broader goal of finding information on the Star-Callers remains the primary objective. The feeling of growth suggests that now might be an opportune moment to consolidate your skills before proceeding.\",\n    \"context\": \"Reflecting on current leads and personal growth within the Great Library\",\n    \"plan_quality\": {\n      \"stat_used\": \"Intelligence\",\n      \"stat_value\": 10,\n      \"modifier\": \"+0 INT\",\n      \"roll_result\": 10,\n      \"dc\": 10,\n      \"dc_category\": \"Standard\",\n      \"dc_reasoning\": \"Standard planning check in a familiar environment (The Great Library)\",\n      \"success\": true,\n      \"margin\": 0,\n      \"quality_tier\": \"Competent\",\n      \"effect\": \"Your analysis is sound, providing a clear view of the immediate options without distraction.\"\n    },\n    \"choices\": [\n      {\n        \"id\": \"level_up_now\",\n        \"text\": \"Embrace Your Growth (Level Up)\",\n        \"description\": \"Take a moment of internal focus to reach Level 2, gaining Action Surge and increased vitality.\",\n        \"risk_level\": \"safe\",\n        \"freeze_time\": true,\n        \"pros\": [\n          \"Immediate increase in power\",\n          \"Gain Action Surge feature\",\n          \"Higher HP for upcoming challenges\"\n        ],\n        \"cons\": [\n          \"Does not advance the search for knowledge directly\"\n        ],\n        \"confidence\": \"high\"\n      },\n      {\n        \"id\": \"investigate_scribe\",\n        \"text\": \"Follow the Nervous Scribe\",\n        \"description\": \"Quietly pursue the scribe who hurried toward the Restricted Section to see what has him so frightened.\",\n        \"risk_level\": \"medium\",\n        \"pros\": [\n          \"May uncover a library secret\",\n          \"Potential lead on the forged keys\"\n        ],\n        \"cons\": [\n          \"Risk of discovery in a restricted area\",\n          \"Distracts from the Star-Caller research\"\n        ],\n        \"confidence\": \"medium\"\n      },\n      {\n        \"id\": \"search_archives\",\n        \"text\": \"Focus on Star-Caller Records\",\n        \"description\": \"Ignore the distractions and redouble your efforts to find the mention of the Star-Callers in the First Age annals.\",\n        \"risk_level\": \"low\",\n        \"pros\": [\n          \"Direct progress on primary objective\",\n          \"Maintains low profile\"\n        ],\n        \"cons\": [\n          \"May miss a time-sensitive event regarding the scribe\"\n        ],\n        \"confidence\": \"high\"\n      }\n    ],\n    \"analysis\": {\n      \"recommended_approach\": \"level_up_now\",\n      \"reasoning\": \"With potential danger looming in the Restricted Section and an audit potentially restricting access soon, being at your full potential is the safest strategy.\",\n      \"contingency\": \"If the scribe's behavior leads to a lockdown, you will need to rely on your improved physical capabilities to navigate the library's more clandestine routes.\"\n    }\n  },\n  \"action_resolution\": {\n    \"player_input\": \"I pause to take stock of what I just learned and the power now within reach.\",\n    \"interpreted_as\": \"contemplation_and_planning\",\n    \"reinterpreted\": false,\n    \"mechanics\": {\n      \"type\": \"skill_check\",\n      \"rolls\": [\n        {\n          \"notation\": \"1d20+0\",\n          \"result\": 10,\n          \"success\": true,\n          \"die_type\": \"d20\",\n          \"dc\": 10,\n          \"purpose\": \"Intelligence (Planning)\",\n          \"modifier\": 0,\n          \"total\": 10,\n          \"margin\": 0,\n          \"dc_category\": \"Standard\",\n          \"dc_reasoning\": \"Standard planning check in a familiar environment (The Great Library)\"\n        }\n      ],\n      \"audit_events\": [\n        \"Intelligence check (10) vs DC 10: Success (Competent tier)\"\n      ]\n    },\n    \"audit_flags\": [],\n    \"narrative_outcome\": \"Aric takes a moment to assess his surroundings and his own growing strength.\"\n  },\n  \"level_up_signal\": {\n    \"level_up\": true,\n    \"new_level\": 2,\n    \"xp_earned\": 50,\n    \"xp_total\": 350,\n    \"xp_to_next_level\": 900,\n    \"source\": \"browser_test\",\n    \"choices\": [\n      {\n        \"id\": \"action_surge\",\n        \"text\": \"Action Surge\",\n        \"description\": \"You can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action.\"\n      },\n      {\n        \"id\": \"hit_points_increase\",\n        \"text\": \"Vitality Increase\",\n        \"description\": \"Your Maximum Hit Points increase by 1d10 + Constitution modifier (or 6 + mod).\"\n      }\n    ],\n    \"rewards\": {\n      \"gold\": 0,\n      \"loot\": [\n        \"None\"\n      ]\n    }\n  },\n  \"rewards_box\": {\n    \"source\": \"milestone\",\n    \"xp_gained\": 50,\n    \"current_xp\": 350,\n    \"next_level_xp\": 900,\n    \"progress_percent\": 38,\n    \"level_up_available\": true,\n    \"loot\": [\n      \"None\"\n    ],\n    \"gold\": 0\n  },\n  \"state_updates\": {\n    \"world_data\": {\n      \"world_time\": {\n        \"year\": 1492,\n        \"month\": \"Mirtul\",\n        \"day\": 15,\n        \"hour\": 8,\n        \"minute\": 5,\n        \"second\": 0,\n        \"microsecond\": 1,\n        \"time_of_day\": \"morning\"\n      }\n    },\n    \"player_character_data\": {\n      \"experience\": {\n        \"current\": 350\n      }\n    }\n  },\n  \"entities_mentioned\": [\n    \"Aric (Lvl 1)\",\n    \"A Nervous Scribe (Lvl 1)\"\n  ],\n  \"location_confirmed\": \"The Great Library\",\n  \"god_mode_response\": \"\"\n}",
+  "resources": "HD: 1/1, Spells: None (Lvl 1 Fighter)",
+  "response": "Morning (08:05:00) in The Great Library\u2014You stand motionless between the towering shelves, the smell of old paper and dust filling your lungs as you let the events of the last few minutes settle. The terrified look on the young scribe's face as he hurried toward the Restricted Section remains etched in your mind, and the cryptic incantation you overheard still echoes faintly in the heavy silence. You feel a new strength stirring within you\u2014the fruit of your recent studies and the harsh lessons of your past experiences beginning to crystallize into greater martial prowess. For a moment, the vast knowledge surrounding you feels less like a burden and more like a tool, waiting for you to sharpen your focus.\n\n**LEVEL UP AVAILABLE!** You have earned enough experience to reach Level 2!\nBenefits: Apply level 2 benefits now.\nWould you like to level up now?\nOptions: 1. Level up immediately  2. Continue adventuring\nIf you continue adventuring, you remain Level 1 and defer these benefits until you choose to level up.\n\nBenefits: Apply level 2 benefits now.",
   "rewards_box": {
     "current_xp": 350,
     "gold": 0,
     "level_up_available": true,
     "level_up_choices": [
       {
-        "description": "You can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action. Once you use this feature, you must finish a short or long rest before you can use it again.",
-        "feature": "Action Surge"
+        "description": "You can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action.",
+        "id": "action_surge",
+        "text": "Action Surge"
+      },
+      {
+        "description": "Your Maximum Hit Points increase by 1d10 + Constitution modifier (or 6 + mod).",
+        "id": "hit_points_increase",
+        "text": "Vitality Increase"
       }
     ],
     "loot": [],
@@ -471,24 +488,22 @@
     "next_level_xp": 900,
     "progress_percent": 39.0,
     "resolved_target_level": 2,
-    "source": "milestone",
+    "source": "browser_test",
     "xp_gained": 50,
     "xp_to_next_level": 900,
     "xp_total": 350
   },
   "sequence_id": 6,
-  "session_header": "[SESSION_HEADER]\nTimestamp: 1492 DR, Hammer 1, 08:05:00\nLocation: The Great Library\nStatus: Lvl 2 Fighter | HP: 16/16 | XP: 350/900 | Gold: 10gp\nConditions: Normal | Exhaustion: 0 | Inspiration: No",
+  "session_header": "[Mode: STORY MODE]\n[SESSION_HEADER]\nTimestamp: 1492 DR, Mirtul 15, 08:05:00\nLocation: The Great Library\nStatus: Lvl 1 Fighter | HP: 12/12 | XP: 350/900 | Gold: 10gp\nConditions: Normal | Exhaustion: 0 | Inspiration: No",
   "social_hp_challenge": {},
   "state_cleaned": false,
   "state_updates": {
     "custom_campaign_state": {
       "core_memories": [
-        "[auto] Morning (08:05:00) in The Great Library\u2014you pause, the ink drying on your quill as Elin's (Lvl 2) whispered rumor sinks in. You take a slow, deep breath, feeling a sudden sharpening of your senses and a steadying of your pulse. The rigorous combat drills you've maintained alongside your studies seem to coalesce into a new reservoir of martial potential. You feel capable of pushing your body beyond its normal limits\u2014a burst of speed and power you've only glimpsed in training. \n\nElin (Lvl 2"
+        "[auto] Morning (08:05:00) in The Great Library\u2014You stand motionless between the towering shelves, the smell of old paper and dust filling your lungs as you let the events of the last few minutes settle. The terrified look on the young scribe's face as he hurried toward the Restricted Section remains etched in your mind, and the cryptic incantation you overheard still echoes faintly in the heavy silence. You feel a new strength stirring within you\u2014the fruit of your recent studies and the harsh le"
       ],
       "last_location": "The Great Library",
-      "last_story_mode_sequence_id": 6,
-      "level_up_in_progress": true,
-      "level_up_pending": false
+      "last_story_mode_sequence_id": 6
     },
     "game_state": {
       "combat_state": {
@@ -502,15 +517,15 @@
         },
         "active_constraints": [],
         "arc_milestones": {},
-        "attribute_system": "standard",
+        "attribute_system": "D&D",
         "campaign_tier": "mortal",
         "character_creation_completed": true,
         "character_creation_in_progress": false,
         "character_creation_stage": "complete",
         "companion_arcs": {},
         "core_memories": [
-          "[auto] Morning (08:05:00) in The Great Library\u2014the golden sunlight of Hammer filters through the high, arched windows, illuminating millions of dust motes that dance above the endless rows of oak shelves. Aric (Lvl 1), a scholar whose calloused hands speak of combat training just as much as his ink-stained fingers speak of study, sits at a heavy mahogany desk cluttered with half-rolled parchments. The air is thick with the scent of aged vellum, cedarwood, and the faint, ozone-tang of residual ma",
-          "[auto] Morning (08:05:00) in The Great Library\u2014you pause, the ink drying on your quill as Elin's (Lvl 2) whispered rumor sinks in. You take a slow, deep breath, feeling a sudden sharpening of your senses and a steadying of your pulse. The rigorous combat drills you've maintained alongside your studies seem to coalesce into a new reservoir of martial potential. You feel capable of pushing your body beyond its normal limits\u2014a burst of speed and power you've only glimpsed in training. \n\nElin (Lvl 2"
+          "[auto] Morning (08:05:00) in The Great Library\u2014the air is thick with the scent of vellum, beeswax, and the dry, sweet dust of centuries. Shafts of pale sunlight pierce the high, stained-glass windows, illuminating billions of dust motes dancing in the silence. You, Aric (Lvl 1), stand amidst towering mahogany shelves that stretch upward into shadow, their contents representing the collective memory of a dozen fallen empires.\n\nThe silence is not absolute; it is a heavy, expectant thing, broken on",
+          "[auto] Morning (08:05:00) in The Great Library\u2014You stand motionless between the towering shelves, the smell of old paper and dust filling your lungs as you let the events of the last few minutes settle. The terrified look on the young scribe's face as he hurried toward the Restricted Section remains etched in your mind, and the cryptic incantation you overheard still echoes faintly in the heavy silence. You feel a new strength stirring within you\u2014the fruit of your recent studies and the harsh le"
         ],
         "divine_potential": 0,
         "divine_upgrade_available": false,
@@ -529,12 +544,13 @@
         "last_location": "The Great Library",
         "last_story_mode_sequence_id": 6,
         "level_up_in_progress": true,
-        "level_up_pending": false,
+        "level_up_pending": true,
         "multiverse_upgrade_available": false,
         "next_companion_arc_turn": 3,
         "player_character_data_extras": {
           "description": "Browser test campaign"
         },
+        "success_streak": 0,
         "universe_control": 0
       },
       "debug_mode": true,
@@ -551,45 +567,19 @@
       "game_state_version": 1,
       "item_registry": {},
       "last_living_world_time": {
-        "day": 1,
+        "day": 15,
         "hour": 8,
         "microsecond": 0,
         "minute": 5,
-        "month": "Hammer",
+        "month": "Mirtul",
         "second": 0,
         "time_of_day": "morning",
         "year": 1492
       },
-      "last_living_world_turn": 2,
+      "last_living_world_turn": 1,
       "last_state_update_timestamp": "<SERVER_TIMESTAMP>",
       "npc_agendas": {},
       "npc_data": {
-        "Elin": {
-          "display_name": "Elin",
-          "entity_id": "npc_elin_001",
-          "level": 2,
-          "relationships": {
-            "player": {
-              "disposition": "friendly",
-              "trust_level": 1
-            }
-          },
-          "role": "Scribe",
-          "tier": "commoner"
-        },
-        "Master Thorne": {
-          "display_name": "Master Thorne",
-          "entity_id": "npc_thorne_001",
-          "level": 12,
-          "relationships": {
-            "player": {
-              "disposition": "neutral",
-              "trust_level": 0
-            }
-          },
-          "role": "Head Archivist",
-          "tier": "lord"
-        },
         "npc_goblin_001": {
           "armor_class": 13,
           "hp_current": 7,
@@ -629,8 +619,14 @@
         "level": 2,
         "level_up_choices": [
           {
-            "description": "You can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action. Once you use this feature, you must finish a short or long rest before you can use it again.",
-            "feature": "Action Surge"
+            "description": "You can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action.",
+            "id": "action_surge",
+            "text": "Action Surge"
+          },
+          {
+            "description": "Your Maximum Hit Points increase by 1d10 + Constitution modifier (or 6 + mod).",
+            "id": "hit_points_increase",
+            "text": "Vitality Increase"
           }
         ],
         "thinking": "The model determined that level-up is available; present the player with level-up controls."
@@ -696,20 +692,16 @@
         },
         "experience": {
           "current": 350,
-          "to_next_level": 900
+          "to_next_level": 300
         },
-        "features": [
-          "Second Wind",
-          "Action Surge"
-        ],
-        "hp_current": 16,
-        "hp_max": 16,
-        "level": 2,
+        "hp_current": 12,
+        "hp_max": 12,
+        "level": 1,
         "name": "Aric",
         "proficiency_bonus": 2,
         "string_id": "pc_aric_001"
       },
-      "player_turn": 2,
+      "player_turn": 1,
       "rewards_pending": {
         "level_up_available": true,
         "new_level": 2,
@@ -721,39 +713,38 @@
       "rumors": [
         {
           "accuracy": "partial",
-          "content": "They say the basement levels aren't as empty as the maps suggest.",
-          "related_event": "Basement Entity Movement",
+          "content": "They say the books in the West Wing move when you aren't looking.",
+          "related_event": "North Wing flickering light",
           "scene_generated": 2,
           "source_type": "commoner",
-          "turn_generated": 2
+          "turn_generated": 1
         }
       ],
       "scene_event": {
-        "actor": "Elin (Lvl 2)",
-        "description": "The young scribe approaches with a rumor about the basement.",
+        "actor": "A Nervous Scribe (Lvl 1)",
+        "description": "A young scribe with ink-stained fingers rushes past you, nearly knocking over your stool. He looks terrified and keeps glancing toward the Restricted Section.",
         "player_response_required": true,
         "scene_generated": 2,
-        "turn_generated": 2,
+        "turn_generated": 1,
         "type": "messenger",
-        "urgency": "low"
+        "urgency": "immediate"
       },
-      "schema_migrated_at": "2026-04-22T22:58:29.301513+00:00",
+      "schema_migrated_at": "2026-04-22T23:20:00.979802+00:00",
       "schema_migration_version": 1,
-      "session_id": "layer4-evidence-20260422T225759Z",
+      "session_id": "layer4-evidence-20260422T231919Z",
       "social_hp_challenge": null,
       "time_pressure_warnings": {},
       "time_sensitive_events": {},
-      "turn_number": 2,
-      "user_id": "layer4-evidence-20260422T225759Z",
+      "turn_number": 1,
+      "user_id": "layer4-evidence-20260422T231919Z",
       "world_data": {
         "current_location_name": "The Great Library",
-        "location": "The Great Library",
         "world_time": {
-          "day": 1,
+          "day": 15,
           "hour": 8,
           "microsecond": 1,
           "minute": 5,
-          "month": "Hammer",
+          "month": "Mirtul",
           "second": 0,
           "time_of_day": "morning",
           "year": 1492
@@ -762,85 +753,76 @@
       "world_events": {
         "background_events": [
           {
-            "action": "Frantically searching for a misfiled tome in the alchemy wing.",
-            "actor": "Apprentice Scribe",
-            "discovery_condition": "Player visits the alchemy wing",
+            "action": "Bribed a junior scribe for access to the restricted vaults",
+            "actor": "Zhentarim Agents",
+            "discovery_condition": "Player finds the nervous scribe or notices missing keys",
             "event_type": "immediate",
-            "location": "The Great Library - Alchemy Wing",
-            "outcome": "Increased noise and minor disruption in that area.",
+            "location": "The Great Library, Lower Levels",
+            "outcome": "A copy of the vault keys was successfully forged",
             "player_aware": false,
-            "player_impact": "DC increase to stealth/concentration in that wing",
+            "player_impact": "The library security will be compromised soon",
             "scene_generated": 2,
             "status": "pending",
-            "turn_generated": 2
+            "turn_generated": 1
           },
           {
-            "action": "A draft whistles through a loose pane, extinguishing candles.",
-            "actor": "Library Window",
-            "discovery_condition": "Visible change in lighting",
+            "action": "Requested an emergency audit of all First Age texts",
+            "actor": "High Mage Valthun",
+            "discovery_condition": "Messengers arrive at the library",
             "event_type": "immediate",
-            "location": "The Great Library - Main Hall",
-            "outcome": "A distant section of the library falls into shadow.",
-            "player_aware": true,
-            "player_impact": "Atmospheric change",
+            "location": "Silverymoon",
+            "outcome": "Orders are traveling toward the Great Library",
+            "player_aware": false,
+            "player_impact": "Access to Aric's research material may be restricted within hours",
             "scene_generated": 2,
-            "status": "discovered",
-            "turn_generated": 2
+            "status": "pending",
+            "turn_generated": 1
           },
           {
-            "action": "Walking toward the Restricted Section with a heavy iron key.",
-            "actor": "Master Thorne (Lvl 12)",
-            "discovery_condition": "Direct witness",
+            "action": "Reported a flickering blue light in the North Wing at night",
+            "actor": "Library Scribes",
+            "discovery_condition": "Overheard gossip in the library common room",
             "event_type": "immediate",
-            "location": "The Great Library - Central Hub",
-            "outcome": "The Restricted Section is temporarily opened.",
-            "player_aware": true,
-            "player_impact": "Opportunity for infiltration or observation",
+            "location": "The Great Library, North Wing",
+            "outcome": "Dismissed as 'arcane residue' by the Head Librarian",
+            "player_aware": false,
+            "player_impact": "Indicates a potential haunt or rift in the library",
             "scene_generated": 2,
-            "status": "discovered",
-            "turn_generated": 2
+            "status": "pending",
+            "turn_generated": 1
           },
           {
-            "action": "Beginning to monitor the library perimeter for an artifact.",
-            "actor": "Shadow Monks Faction",
-            "discovery_condition": "Successful Investigation/Perception check of the exterior",
+            "action": "Began infiltrating the merchant guilds of Waterdeep",
+            "actor": "The Cult of the Dragon",
+            "discovery_condition": "Rumors of shifting trade prices or missing shipments",
             "event_type": "long_term",
-            "location": "Library Exterior",
-            "outcome": "Perimeter security is compromised by third parties.",
+            "location": "Waterdeep",
+            "outcome": "Acquired three warehouses for secret shipments",
             "player_aware": false,
-            "player_impact": "Future complication/hostile encounter",
+            "player_impact": "Will affect resource availability in the region in 15+ turns",
             "scene_generated": 2,
             "status": "pending",
-            "turn_generated": 2
+            "turn_generated": 1
           }
-        ],
-        "turn_generated": 1
+        ]
       },
       "world_resources": {
-        "last_note": "HD: 2/2, Second Wind: 1/1, Action Surge: 1/1"
+        "last_note": "HD: 1/1, Spells: None (Lvl 1 Fighter)"
       }
     },
     "player_character_data": {
       "experience": {
-        "current": 350,
-        "to_next_level": 900
-      },
-      "features": [
-        "Second Wind",
-        "Action Surge"
-      ],
-      "hp_current": 16,
-      "hp_max": 16,
-      "level": 2
+        "current": 350
+      }
     },
     "world_data": {
       "current_location_name": "The Great Library",
       "world_time": {
-        "day": 1,
+        "day": 15,
         "hour": 8,
-        "microsecond": 0,
+        "microsecond": 1,
         "minute": 5,
-        "month": "Hammer",
+        "month": "Mirtul",
         "second": 0,
         "time_of_day": "morning",
         "year": 1492
@@ -849,67 +831,66 @@
     "world_events": {
       "background_events": [
         {
-          "action": "Frantically searching for a misfiled tome in the alchemy wing.",
-          "actor": "Apprentice Scribe",
-          "discovery_condition": "Player visits the alchemy wing",
+          "action": "Bribed a junior scribe for access to the restricted vaults",
+          "actor": "Zhentarim Agents",
+          "discovery_condition": "Player finds the nervous scribe or notices missing keys",
           "event_type": "immediate",
-          "location": "The Great Library - Alchemy Wing",
-          "outcome": "Increased noise and minor disruption in that area.",
+          "location": "The Great Library, Lower Levels",
+          "outcome": "A copy of the vault keys was successfully forged",
           "player_aware": false,
-          "player_impact": "DC increase to stealth/concentration in that wing",
+          "player_impact": "The library security will be compromised soon",
           "scene_generated": 2,
           "status": "pending",
-          "turn_generated": 2
+          "turn_generated": 1
         },
         {
-          "action": "A draft whistles through a loose pane, extinguishing candles.",
-          "actor": "Library Window",
-          "discovery_condition": "Visible change in lighting",
+          "action": "Requested an emergency audit of all First Age texts",
+          "actor": "High Mage Valthun",
+          "discovery_condition": "Messengers arrive at the library",
           "event_type": "immediate",
-          "location": "The Great Library - Main Hall",
-          "outcome": "A distant section of the library falls into shadow.",
-          "player_aware": true,
-          "player_impact": "Atmospheric change",
+          "location": "Silverymoon",
+          "outcome": "Orders are traveling toward the Great Library",
+          "player_aware": false,
+          "player_impact": "Access to Aric's research material may be restricted within hours",
           "scene_generated": 2,
-          "status": "discovered",
-          "turn_generated": 2
+          "status": "pending",
+          "turn_generated": 1
         },
         {
-          "action": "Walking toward the Restricted Section with a heavy iron key.",
-          "actor": "Master Thorne (Lvl 12)",
-          "discovery_condition": "Direct witness",
+          "action": "Reported a flickering blue light in the North Wing at night",
+          "actor": "Library Scribes",
+          "discovery_condition": "Overheard gossip in the library common room",
           "event_type": "immediate",
-          "location": "The Great Library - Central Hub",
-          "outcome": "The Restricted Section is temporarily opened.",
-          "player_aware": true,
-          "player_impact": "Opportunity for infiltration or observation",
+          "location": "The Great Library, North Wing",
+          "outcome": "Dismissed as 'arcane residue' by the Head Librarian",
+          "player_aware": false,
+          "player_impact": "Indicates a potential haunt or rift in the library",
           "scene_generated": 2,
-          "status": "discovered",
-          "turn_generated": 2
+          "status": "pending",
+          "turn_generated": 1
         },
         {
-          "action": "Beginning to monitor the library perimeter for an artifact.",
-          "actor": "Shadow Monks Faction",
-          "discovery_condition": "Successful Investigation/Perception check of the exterior",
+          "action": "Began infiltrating the merchant guilds of Waterdeep",
+          "actor": "The Cult of the Dragon",
+          "discovery_condition": "Rumors of shifting trade prices or missing shipments",
           "event_type": "long_term",
-          "location": "Library Exterior",
-          "outcome": "Perimeter security is compromised by third parties.",
+          "location": "Waterdeep",
+          "outcome": "Acquired three warehouses for secret shipments",
           "player_aware": false,
-          "player_impact": "Future complication/hostile encounter",
+          "player_impact": "Will affect resource availability in the region in 15+ turns",
           "scene_generated": 2,
           "status": "pending",
-          "turn_generated": 2
+          "turn_generated": 1
         }
-      ],
-      "turn_generated": 1
+      ]
     },
     "world_resources": {
-      "last_note": "HD: 2/2, Second Wind: 1/1, Action Surge: 1/1"
+      "last_note": "HD: 1/1, Spells: None (Lvl 1 Fighter)"
     }
   },
   "story": [
     {
-      "text": "Morning (08:05:00) in The Great Library\u2014you pause, the ink drying on your quill as Elin's (Lvl 2) whispered rumor sinks in. You take a slow, deep breath, feeling a sudden sharpening of your senses and a steadying of your pulse. The rigorous combat drills you've maintained alongside your studies seem to coalesce into a new reservoir of martial potential. You feel capable of pushing your body beyond its normal limits\u2014a burst of speed and power you've only glimpsed in training. \n\nElin (Lvl 2) lingers for a moment, her eyes darting toward the heavy iron-bound doors of the basement stairs. Master Thorne (Lvl 12) has already vanished into the stacks toward the Restricted Section, his rhythmic cane-clacks echoing faintly through the hall. The library, once a sanctuary of quiet study, suddenly feels like a labyrinth of secrets waiting to be unraveled. You have the knowledge of the rumors, the observation of the Archivist, and a newfound strength within you.\n\n**LEVEL UP AVAILABLE!** You have earned enough experience to reach Level 2!\nBenefits: Apply level 2 benefits now.\nWould you like to level up now?\nOptions: 1. Level up immediately  2. Continue adventuring\nIf you continue adventuring, you remain Level 2 and defer these benefits until you choose to level up.\n\nBenefits: Apply level 2 benefits now."
+      "text": "Morning (08:05:00) in The Great Library\u2014You stand motionless between the towering shelves, the smell of old paper and dust filling your lungs as you let the events of the last few minutes settle. The terrified look on the young scribe's face as he hurried toward the Restricted Section remains etched in your mind, and the cryptic incantation you overheard still echoes faintly in the heavy silence. You feel a new strength stirring within you\u2014the fruit of your recent studies and the harsh lessons of your past experiences beginning to crystallize into greater martial prowess. For a moment, the vast knowledge surrounding you feels less like a burden and more like a tool, waiting for you to sharpen your focus.\n\n**LEVEL UP AVAILABLE!** You have earned enough experience to reach Level 2!\nBenefits: Apply level 2 benefits now.\nWould you like to level up now?\nOptions: 1. Level up immediately  2. Continue adventuring\nIf you continue adventuring, you remain Level 1 and defer these benefits until you choose to level up.\n\nBenefits: Apply level 2 benefits now."
     }
   ],
   "success": true,
@@ -919,58 +900,57 @@
   "world_events": {
     "background_events": [
       {
-        "action": "Frantically searching for a misfiled tome in the alchemy wing.",
-        "actor": "Apprentice Scribe",
-        "discovery_condition": "Player visits the alchemy wing",
+        "action": "Bribed a junior scribe for access to the restricted vaults",
+        "actor": "Zhentarim Agents",
+        "discovery_condition": "Player finds the nervous scribe or notices missing keys",
         "event_type": "immediate",
-        "location": "The Great Library - Alchemy Wing",
-        "outcome": "Increased noise and minor disruption in that area.",
+        "location": "The Great Library, Lower Levels",
+        "outcome": "A copy of the vault keys was successfully forged",
         "player_aware": false,
-        "player_impact": "DC increase to stealth/concentration in that wing",
+        "player_impact": "The library security will be compromised soon",
         "scene_generated": 2,
         "status": "pending",
-        "turn_generated": 2
+        "turn_generated": 1
       },
       {
-        "action": "A draft whistles through a loose pane, extinguishing candles.",
-        "actor": "Library Window",
-        "discovery_condition": "Visible change in lighting",
+        "action": "Requested an emergency audit of all First Age texts",
+        "actor": "High Mage Valthun",
+        "discovery_condition": "Messengers arrive at the library",
         "event_type": "immediate",
-        "location": "The Great Library - Main Hall",
-        "outcome": "A distant section of the library falls into shadow.",
-        "player_aware": true,
-        "player_impact": "Atmospheric change",
+        "location": "Silverymoon",
+        "outcome": "Orders are traveling toward the Great Library",
+        "player_aware": false,
+        "player_impact": "Access to Aric's research material may be restricted within hours",
         "scene_generated": 2,
-        "status": "discovered",
-        "turn_generated": 2
+        "status": "pending",
+        "turn_generated": 1
       },
       {
-        "action": "Walking toward the Restricted Section with a heavy iron key.",
-        "actor": "Master Thorne (Lvl 12)",
-        "discovery_condition": "Direct witness",
+        "action": "Reported a flickering blue light in the North Wing at night",
+        "actor": "Library Scribes",
+        "discovery_condition": "Overheard gossip in the library common room",
         "event_type": "immediate",
-        "location": "The Great Library - Central Hub",
-        "outcome": "The Restricted Section is temporarily opened.",
-        "player_aware": true,
-        "player_impact": "Opportunity for infiltration or observation",
+        "location": "The Great Library, North Wing",
+        "outcome": "Dismissed as 'arcane residue' by the Head Librarian",
+        "player_aware": false,
+        "player_impact": "Indicates a potential haunt or rift in the library",
         "scene_generated": 2,
-        "status": "discovered",
-        "turn_generated": 2
+        "status": "pending",
+        "turn_generated": 1
       },
       {
-        "action": "Beginning to monitor the library perimeter for an artifact.",
-        "actor": "Shadow Monks Faction",
-        "discovery_condition": "Successful Investigation/Perception check of the exterior",
+        "action": "Began infiltrating the merchant guilds of Waterdeep",
+        "actor": "The Cult of the Dragon",
+        "discovery_condition": "Rumors of shifting trade prices or missing shipments",
         "event_type": "long_term",
-        "location": "Library Exterior",
-        "outcome": "Perimeter security is compromised by third parties.",
+        "location": "Waterdeep",
+        "outcome": "Acquired three warehouses for secret shipments",
         "player_aware": false,
-        "player_impact": "Future complication/hostile encounter",
+        "player_impact": "Will affect resource availability in the region in 15+ turns",
         "scene_generated": 2,
         "status": "pending",
-        "turn_generated": 2
+        "turn_generated": 1
       }
-    ],
-    "turn_generated": 1
+    ]
   }
 }
