@@ -1,41 +1,32 @@
 # PR 6404 Public Evidence Package
 
 PR: https://github.com/jleechanorg/worldarchitect.ai/pull/6404
-WorldArchitect head under review: `4bb5cbe2d026900dc1019dac7fc62ac6be921664`
+WorldArchitect head under review: `2de6d400ea13fb7377c50a73be57f013a1e44bf0`
 
-This public package republishes the review artifacts for a private repository. The substantive evidence in this package was recaptured from a clean detached worktree at the current head, with `working_tree_dirty: false` in both refreshed bundles.
+This public package republishes review artifacts for a private repository.
+All canonical green artifacts in this package were regenerated from a clean detached worktree on the current PR head, with `working_tree_dirty: false` in both substantive bundles.
 
 ## Claims
 
 1. `level_up_signal` reaches the actual MCP and user response path.
-2. A pending level-up state materialized into a persisted story entry renders atomically in the real browser as paired rewards and planning UI on the latest entry.
+2. A pending level-up state materializes into a persisted story entry that renders atomically in the real browser as paired rewards and planning UI on the latest entry.
 
-## Clean-computer repro
+## Current-head evidence roots
 
-Prerequisites:
-- access to `https://github.com/jleechanorg/worldarchitect.ai`
-- Python 3.11+
-- real Firebase credentials and real LLM credentials configured per the repo README
-- `WORLDAI_DEV_MODE=true`
-- `TESTING_AUTH_BYPASS=true` for the browser run
+- Real API green bundle: `/tmp/worldarchitect.ai/unknown/level_up_signal_real_api/iteration_002`
+- Browser green bundle: `/tmp/worldarchitect.ai/level-up-integrated/iteration_010/ui_level_up_rewards_planning_atomicity_browser/iteration_001`
+- Browser red attempt on same SHA: `/tmp/worldarchitect.ai/level-up-integrated/iteration_009/ui_level_up_rewards_planning_atomicity_browser/iteration_001`
+- Current-head clean rerun workspace: `/tmp/pr6404_clean_evidence_2de6`
 
-Commands used for the reviewed evidence:
+## Current-head verification
 
-```bash
-git clone https://github.com/jleechanorg/worldarchitect.ai.git
-cd worldarchitect.ai
-git checkout 4bb5cbe2d026900dc1019dac7fc62ac6be921664
-
-WORLDAI_DEV_MODE=true python3 testing_mcp/test_level_up_signal_evidence_real_api.py --full
-WORLDAI_DEV_MODE=true TESTING_AUTH_BYPASS=true python3 testing_ui/run_layer4_level_up_evidence.py
-```
-
-Expected outputs:
-- real API harness summary ends with `Passed: 2`, `Failed: 0`
-- browser harness summary ends with `TEST PASSED`
-- refreshed clean evidence roots are:
-  - `/tmp/worldarchitect.ai/unknown/level_up_signal_real_api/iteration_001`
-  - `/tmp/worldarchitect.ai/level-up-integrated/iteration_008/ui_level_up_rewards_planning_atomicity_browser/iteration_001`
+- `python3 -m pytest /tmp/pr6404_clean_evidence_2de6/mvp_site/tests/test_rewards_engine.py /tmp/pr6404_clean_evidence_2de6/mvp_site/tests/test_llm_response_validation.py /tmp/pr6404_clean_evidence_2de6/mvp_site/tests/test_structured_fields_utils.py -q`
+  - `76 passed, 2 skipped in 1.94s`
+- `WORLDAI_DEV_MODE=true python3 /tmp/pr6404_clean_evidence_2de6/testing_mcp/test_level_up_signal_evidence_real_api.py --full`
+  - `Passed: 2`, `Failed: 0`
+- `WORLDAI_DEV_MODE=true TESTING_AUTH_BYPASS=true python3 /tmp/pr6404_clean_evidence_2de6/testing_ui/run_layer4_level_up_evidence.py`
+  - first same-head attempt (`iteration_009`): failed because the live model emitted `level_up_signal.level_up=false`
+  - second same-head attempt (`iteration_010`): passed
 
 ## Browser media
 

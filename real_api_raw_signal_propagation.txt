@@ -1,23 +1,125 @@
 {
-  "session_header": "[SESSION_HEADER]\nTimestamp: 1492 DR, Mirtul 15, 08:00:15\nLocation: Ancient Ruins Vault\nStatus: Lvl 4 Wizard | HP: 24/24 | XP: 6900/14000 | Gold: 15gp\nConditions: None | Exhaustion: 0 | Inspiration: No",
-  "narrative": "Your fingers tremble slightly as they brush against the cold, vellum-wrapped leather of the Tome of Archmage Valdris. As you lift it from the stone pedestal, the blue ley-line energy that once wreathed the altar dissipates with a soft, resonant hum, leaving the vault in a peaceful silence. The weight of the book is substantial, its cover etched with silver runes that pulse faintly in response to your own arcane presence. You have done it; the knowledge that was lost for centuries is now within your grasp.\n\nA profound sense of clarity washes over you. The struggles of the ruins—the traps bypassed, the shadows outmaneuvered—crystallize into a deeper understanding of the Weave. You feel the boundary of your current power straining, ready to break through into the higher circles of magic. The transition is inevitable; you have reached Level 5.",
+  "session_header": "[SESSION_HEADER]\nTimestamp: 1492 DR, Hammer 1, 08:15:00\nLocation: Sealed Vault Chamber\nStatus: Lvl 4 Wizard | HP: 24/24 | XP: 6900/14000 | Gold: 10gp\nConditions: Normal | Exhaustion: 0 | Inspiration: No",
+  "resources": "HD: 4/4 | Spells: L1 4/4, L2 3/3 | Exhaustion: 0",
+  "narrative": "As your fingers brush the cold, starlit vellum of the Tome of Archmage Valdris, a soft azure hum resonates through the chamber. The ancient pedestal, carved from a single block of obsidian, sinks inches into the floor as the weight is lifted, but no traps spring—only a profound sense of relief washes over you. \n\nYou open the cover, and the ink shimmers with a life of its own. Reflecting on the legacy of Valdris, you realize this isn't just a collection of spells; it is a roadmap of the Weave itself, documented during the height of the Netherese era. The significance is staggering. With this in your possession, the boundaries of your magical understanding begin to dissolve, making way for a power you have only glimpsed in theory.\n\nA strange, protective aura radiates from the tome, settling the dust and quieting the lingering echoes of the ruins. For the first time in centuries, the vault feels like a place of peace rather than a tomb.",
   "planning_block": {
-    "thinking": "Aldric has successfully recovered the tome, completing the quest 'The Ancient Tome'. This significant milestone provides 500 XP, pushing his total to 6,900 XP—well past the 6,500 threshold for Level 5. As he holds the artifact, his mind expands, unlocking the potential for 3rd-level spells and increased proficiency.",
+    "thinking": "Aldric has successfully recovered the primary objective. The immediate threat has subsided, and the influx of knowledge from the tome has pushed his capabilities to a new threshold. The most logical next step is to process this growth before attempting to leave the ruins.",
+    "context": "Quest complete - level up available",
     "choices": [
       {
-        "id": "begin_level_up",
-        "text": "Begin Level 5 Advancement",
-        "description": "Enter a state of deep meditation to finalize your transition to Level 5 and select your new 3rd-level spells.",
+        "id": "level_up_now",
+        "text": "Level Up to Level 5",
+        "description": "Meditate on the Tome's secrets to unlock 3rd-level spells and increased proficiency.",
         "risk_level": "safe",
         "freeze_time": true
       },
       {
-        "id": "examine_tome_details",
-        "text": "Examine Tome Details",
-        "description": "Read through the first few pages of Valdris's work before focusing on your own growth.",
-        "risk_level": "safe"
+        "id": "study_tome_further",
+        "text": "Deep Study of the Tome",
+        "description": "Spend time identifying specific unique properties of the artifact before moving.",
+        "risk_level": "low"
+      },
+      {
+        "id": "exit_ruins",
+        "text": "Exit the Ruins",
+        "description": "Begin the journey back to civilization with the prize secured.",
+        "risk_level": "medium"
       }
     ]
+  },
+  "action_resolution": {
+    "player_input": "I lift the Tome of Archmage Valdris from the ancient pedestal, complete the quest, and reflect on the significance of what I have achieved.",
+    "interpreted_as": "quest_completion_and_arcana_check",
+    "reinterpreted": false,
+    "mechanics": {
+      "type": "skill_check",
+      "rolls": [
+        {
+          "purpose": "Arcana (Reflecting on significance)",
+          "notation": "1d20+6",
+          "result": 14,
+          "total": 20,
+          "dc": 15,
+          "success": true,
+          "die_type": "d20",
+          "modifier": 6,
+          "dc_reasoning": "Standard DC for identifying historical/arcane significance of a legendary artifact."
+        }
+      ],
+      "audit_events": [
+        "Quest 'The Ancient Tome' completed.",
+        "Objective 'Recover the tome from the pedestal' achieved.",
+        "Sanctuary Mode activated (Medium scale)."
+      ]
+    },
+    "audit_flags": [],
+    "narrative_outcome": "Aldric secures the tome and gains a deep understanding of its historical power."
+  },
+  "state_updates": {
+    "player_character_data": {
+      "experience": {
+        "current": 6900
+      }
+    },
+    "world_data": {
+      "world_time": {
+        "hour": 8,
+        "minute": 15,
+        "second": 0,
+        "microsecond": 0,
+        "time_of_day": "morning",
+        "day": 1,
+        "month": "Hammer",
+        "year": 1492
+      }
+    },
+    "quests": {
+      "active_quests": [
+        {
+          "id": "quest_ancient_tome",
+          "status": "completed",
+          "objectives": [
+            {
+              "description": "Reach the sealed vault chamber",
+              "completed": true
+            },
+            {
+              "description": "Recover the tome from the pedestal",
+              "completed": true
+            }
+          ]
+        }
+      ]
+    },
+    "custom_campaign_state": {
+      "sanctuary_mode": {
+        "active": true,
+        "activated_turn": 3,
+        "expires_turn": 11,
+        "arc": "The Ancient Tome",
+        "scale": "medium"
+      },
+      "arc_milestones": {
+        "primary_arc": {
+          "status": "completed",
+          "phase": "tome_recovered",
+          "progress": 100,
+          "updated_at": "1492-01-01T08:15:00Z"
+        }
+      }
+    }
+  },
+  "rewards_box": {
+    "source": "quest",
+    "xp_gained": 500,
+    "current_xp": 6900,
+    "next_level_xp": 6500,
+    "progress_percent": 100,
+    "level_up_available": true,
+    "loot": [
+      "Tome of Archmage Valdris"
+    ],
+    "gold": 0
   },
   "level_up_signal": {
     "level_up": true,
@@ -30,106 +132,19 @@
       {
         "type": "class_feature",
         "name": "Proficiency Bonus Increase",
-        "description": "Your proficiency bonus increases from +2 to +3."
+        "description": "Your proficiency bonus increases to +3."
       },
       {
         "type": "spellcasting",
-        "name": "3rd-Level Spell Slots",
-        "description": "You gain two 3rd-level spell slots."
-      },
-      {
-        "type": "spellcasting",
-        "name": "New Spells",
-        "description": "You can add two 3rd-level spells to your spellbook (e.g., Fireball, Counterspell)."
-      },
-      {
-        "type": "class_feature",
-        "name": "New Cantrip",
-        "description": "You learn one additional cantrip of your choice."
+        "name": "3rd Level Spells",
+        "description": "You gain access to 3rd-level spell slots and can learn two 3rd-level spells."
       }
-    ],
-    "rewards": {
-      "gold": 0,
-      "loot": [
-        "Tome of Archmage Valdris"
-      ]
-    }
-  },
-  "rewards_box": {
-    "source": "quest",
-    "xp_gained": 500,
-    "current_xp": 6900,
-    "next_level_xp": 14000,
-    "progress_percent": 100,
-    "level_up_available": true,
-    "loot": [
-      "Tome of Archmage Valdris"
-    ],
-    "gold": 0
-  },
-  "action_resolution": {
-    "player_input": "I lift the Tome of Archmage Valdris from the ancient pedestal, complete the quest, and reflect on the significance of what I have achieved.",
-    "interpreted_as": "recovering the quest objective",
-    "reinterpreted": false,
-    "audit_flags": [],
-    "mechanics": {
-      "rolls": [],
-      "audit_events": [
-        "Quest 'The Ancient Tome' completed: +500 XP awarded."
-      ]
-    },
-    "narrative_outcome": "Aldric successfully recovers the tome, achieving Level 5 in the process."
-  },
-  "state_updates": {
-    "player_character_data": {
-      "experience": {
-        "current": 6900,
-        "to_next_level": 14000
-      },
-      "equipment": {
-        "backpack": {
-          "append": [
-            {
-              "name": "Tome of Archmage Valdris",
-              "type": "item",
-              "description": "A rune-etched leather tome containing powerful lost magic."
-            }
-          ]
-        }
-      }
-    },
-    "world_data": {
-      "world_time": {
-        "year": 1492,
-        "month": "Mirtul",
-        "day": 15,
-        "hour": 8,
-        "minute": 0,
-        "second": 15,
-        "microsecond": 0,
-        "time_of_day": "Morning"
-      }
-    },
-    "custom_campaign_state": {
-      "level_up_in_progress": true,
-      "level_up_pending": true,
-      "completed_missions": {
-        "append": "quest_ancient_tome"
-      },
-      "sanctuary_mode": {
-        "active": true,
-        "activated_turn": 1,
-        "expires_turn": 9,
-        "arc": "The Ancient Tome",
-        "scale": "medium"
-      }
-    }
+    ]
   },
   "entities_mentioned": [
-    "Tome of Archmage Valdris"
+    "Tome of Archmage Valdris",
+    "Archmage Valdris"
   ],
-  "location_confirmed": "Ancient Ruins Vault",
-  "resources": "HD: 4/4 | Spells: L1 2/2 | Exhaustion: 0",
-  "player_notification": "A sense of calm settles over the ruins as the quest is completed. You have achieved Level 5!",
-  "god_mode_response": ""
+  "location_confirmed": "Sealed Vault Chamber",
+  "player_notification": "The sanctuary granted by recovering the Tome has settled over the ruins. You are safe for the moment."
 }
